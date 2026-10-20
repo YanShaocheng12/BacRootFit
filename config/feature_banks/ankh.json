@@ -1,0 +1,97 @@
+{
+  "status": "complete_verified",
+  "encoder": "ankh",
+  "proteins": 16383,
+  "dimension": 768,
+  "total_residues": 5907097,
+  "storage": "bfloat16_bits",
+  "window": 1022,
+  "labels_used": false,
+  "mean_std_recomputed_consistently_from_same_native_residues": true,
+  "ddof": 0,
+  "lossy_quantization": false,
+  "checks": [
+    {
+      "row": 0,
+      "length": 211,
+      "singleton_vs_batch_mean_max_error": 0.0,
+      "lossless_storage_verified": true
+    },
+    {
+      "row": 247,
+      "length": 300,
+      "singleton_vs_batch_mean_max_error": 0.0004208609461784363,
+      "lossless_storage_verified": true
+    },
+    {
+      "row": 1008,
+      "length": 64,
+      "singleton_vs_batch_mean_max_error": 0.0,
+      "lossless_storage_verified": true
+    },
+    {
+      "row": 1462,
+      "length": 2378,
+      "singleton_vs_batch_mean_max_error": 0.00016799569129943848,
+      "lossless_storage_verified": true
+    },
+    {
+      "row": 6228,
+      "length": 1200,
+      "singleton_vs_batch_mean_max_error": 0.00019903481006622314,
+      "lossless_storage_verified": true
+    },
+    {
+      "row": 8191,
+      "length": 239,
+      "singleton_vs_batch_mean_max_error": 0.0,
+      "lossless_storage_verified": true
+    },
+    {
+      "row": 10096,
+      "length": 4901,
+      "singleton_vs_batch_mean_max_error": 4.715844988822937e-05,
+      "lossless_storage_verified": true
+    },
+    {
+      "row": 12764,
+      "length": 29,
+      "singleton_vs_batch_mean_max_error": 0.0017879083752632141,
+      "lossless_storage_verified": true
+    },
+    {
+      "row": 14716,
+      "length": 1022,
+      "singleton_vs_batch_mean_max_error": 0.0,
+      "lossless_storage_verified": true
+    },
+    {
+      "row": 16382,
+      "length": 223,
+      "singleton_vs_batch_mean_max_error": 0.0,
+      "lossless_storage_verified": true
+    }
+  ],
+  "old_mean_recipe_checks": [
+    {
+      "row": 0,
+      "max_abs_difference": 0.0
+    },
+    {
+      "row": 7252,
+      "max_abs_difference": 0.0
+    },
+    {
+      "row": 14504,
+      "max_abs_difference": 0.0
+    }
+  ],
+  "files": {
+    "residues.npy": "ccb47280f726a0cae922c291049d682b4fe6e922091f9f7f00fc37099aa1e2a6",
+    "mean.npy": "cc2eb2be3dace4974c92984758bee336837ffcea473e5bc93ca37ae3edbaa0bb",
+    "std.npy": "94fb839d045ad9182e98e433f146a46ba118519ca2ce1abd2a18e2cd486b3059",
+    "done.npy": "6aabfb0e3b7e3a772a3d4071bae9ae2f0b4033ab585b595c29cc6af0af3223a3"
+  },
+  "seconds": 400.6947865486145,
+  "code_sha256": "b60cbbede2240b8336d7bc4324a041eda7ddc8ed8e109155db847e639f100cf9"
+}

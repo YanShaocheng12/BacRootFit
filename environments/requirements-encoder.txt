@@ -1,0 +1,7 @@
+# Install a CUDA-compatible PyTorch wheel separately; reference torch 2.13.0+cu130.
+transformers==5.18.0
+tokenizers==0.23.2
+sentencepiece==0.2.1
+protobuf==6.33.5
+safetensors==0.8.0
+huggingface-hub==1.33.0

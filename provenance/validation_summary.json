@@ -1,0 +1,95 @@
+{
+  "status": "PASS",
+  "formal_database": {
+    "status": "PASS",
+    "proteins": 14505,
+    "positive": 1036,
+    "controls": 13469,
+    "groups": 7799,
+    "development": 11664,
+    "internal_test": 2841,
+    "folds": 5,
+    "group_crossovers": 0,
+    "canonical_files_verified": 61,
+    "scope": "Identity/group integrity; not an exhaustive new sequence-similarity search"
+  },
+  "selected_development_reproduction": {
+    "status": "PASS",
+    "OOF_max_absolute_difference": 4.440892098500626e-16,
+    "internal_test_max_absolute_difference": 4.440892098500626e-16,
+    "threshold_absolute_difference": 0.0,
+    "CV_fits": 5,
+    "development_refits": 1
+  },
+  "deployment_reproduction": {
+    "CV_fits": 5,
+    "refits": 1,
+    "threshold_difference": 0,
+    "max_score_difference": 0.0
+  },
+  "public_evaluation": [
+    {
+      "cohort": "internal_full",
+      "n": 2841,
+      "max_score_difference": 0.0,
+      "metric_errors": {
+        "ROC_AUC": 0.0,
+        "AP": 0.0,
+        "MCC": 0.0,
+        "accuracy": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "balanced_accuracy": 0.0
+      }
+    },
+    {
+      "cohort": "H3_full",
+      "n": 1878,
+      "max_score_difference": 0.0,
+      "metric_errors": {
+        "ROC_AUC": 0.0,
+        "AP": 0.0,
+        "MCC": 0.0,
+        "accuracy": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "balanced_accuracy": 0.0
+      }
+    }
+  ],
+  "FASTA_encoder_check": {
+    "status": "PASS",
+    "proteins": 3,
+    "longest_protein_residues": 4538,
+    "windows_for_longest": 5,
+    "raw_mean_max_absolute_difference_from_original_cache": 6.0980673879384995e-05,
+    "registered_precision": "CUDA FP16",
+    "scaler_refitted": false,
+    "scope": "Software execution/numerical check on known benign training examples, not independent biological validation"
+  },
+  "website_browser_check": {
+    "status": "PASS",
+    "browser": "existing Google Chrome, Playwright headless",
+    "checks": [
+      "14505 records loaded; paginated to 50",
+      "positive filter: 1036",
+      "control filter: 13469",
+      "protein detail: full sequence and qualified source observation with locator",
+      "matched TSV download",
+      "matched FASTA download",
+      "study filter",
+      "empty search and disabled download",
+      "pagination",
+      "mobile 390px: no viewport overflow"
+    ],
+    "page_errors": []
+  },
+  "unit_tests": {
+    "passed": 4,
+    "failed": 0,
+    "scope": "MCC tied-score boundary enumeration, fixed classes, FASTA identity and checked asset installation"
+  },
+  "protected_original_artifacts_unchanged": 10,
+  "full_340_search_rerun_for_packaging": false,
+  "environment_scope": "Installed wheel and freshly extracted assets with the existing scientific dependencies; not a newly provisioned clean-room full-search environment"
+}

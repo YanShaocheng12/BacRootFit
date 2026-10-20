@@ -1,0 +1,14 @@
+{
+  "numerical_fit_routines_unchanged": true,
+  "path_bindings_replaced_in": "research_engine/common26.py",
+  "predictor_change": "main(argv=None) argument routing only; numerical encoder/scaler/SVM recipe unchanged",
+  "new_orchestration": "bacrootfit.train; separately validated against released OOF and test scores",
+  "sources": {
+    "V27research_repaired340_20261017\\fit26.py": "6c899fef3b91ebec477f21b9642b133d2ffdc8863d092265cf29f585acc18d93",
+    "V27research_repaired340_20261017\\neural26.py": "eb0e15653ce6cff105ce965a3a7ed785e0c5d59e5979ac8cd14658d0befbf568",
+    "V27research_repaired340_20261017\\common26.py": "95d58ba75adb935e6f67ea47ee269a91bad4c9f874b28b8da29c221247095209",
+    "V27_publication_supplement_20261017\\release\\code\\portable_predict.py": "0bb3bfd29f90c7d1e5e50a269192eb89687051f32d378a6836a6b7e8cb46132f"
+  },
+  "manuscript_sha256": "0860cb91c0535081f7335a9c164b0937b61f2c129811734b153e1ec5d4d8243d",
+  "submission_package_sha256": "006cec22a06691c9e7a37c5f112b940b14136fecb12452c44a2edbd59e550b3c"
+}

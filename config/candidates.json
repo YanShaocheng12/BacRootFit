@@ -1,0 +1,5502 @@
+[
+  {
+    "id": "prott5_mean_lr_C0.1_none",
+    "encoder": "prott5",
+    "representation": "mean",
+    "learner": "lr",
+    "C": 0.1,
+    "weight": "none",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "prott5_mean_lr_C0.1_balanced",
+    "encoder": "prott5",
+    "representation": "mean",
+    "learner": "lr",
+    "C": 0.1,
+    "weight": "balanced",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "prott5_mean_lr_C1_none",
+    "encoder": "prott5",
+    "representation": "mean",
+    "learner": "lr",
+    "C": 1.0,
+    "weight": "none",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "prott5_mean_lr_C1_balanced",
+    "encoder": "prott5",
+    "representation": "mean",
+    "learner": "lr",
+    "C": 1.0,
+    "weight": "balanced",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "prott5_mean_lr_C10_none",
+    "encoder": "prott5",
+    "representation": "mean",
+    "learner": "lr",
+    "C": 10.0,
+    "weight": "none",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "prott5_mean_lr_C10_balanced",
+    "encoder": "prott5",
+    "representation": "mean",
+    "learner": "lr",
+    "C": 10.0,
+    "weight": "balanced",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "prott5_mean_svm_C0.1_G0.1_none",
+    "encoder": "prott5",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 0.1,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "prott5_mean_svm_C0.1_G0.1_balanced",
+    "encoder": "prott5",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 0.1,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "prott5_mean_svm_C0.1_G1_none",
+    "encoder": "prott5",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 1.0,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "prott5_mean_svm_C0.1_G1_balanced",
+    "encoder": "prott5",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 1.0,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "prott5_mean_svm_C1_G0.1_none",
+    "encoder": "prott5",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 0.1,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "prott5_mean_svm_C1_G0.1_balanced",
+    "encoder": "prott5",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 0.1,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "prott5_mean_svm_C1_G1_none",
+    "encoder": "prott5",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 1.0,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "prott5_mean_svm_C1_G1_balanced",
+    "encoder": "prott5",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 1.0,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "prott5_mean_svm_C10_G0.1_none",
+    "encoder": "prott5",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 0.1,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "prott5_mean_svm_C10_G0.1_balanced",
+    "encoder": "prott5",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 0.1,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "prott5_mean_svm_C10_G1_none",
+    "encoder": "prott5",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 1.0,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "prott5_mean_svm_C10_G1_balanced",
+    "encoder": "prott5",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 1.0,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "prott5_mean_mlp_H64_WD0.0001_none",
+    "encoder": "prott5",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "prott5_mean_mlp_H64_WD0.0001_balanced",
+    "encoder": "prott5",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "prott5_mean_mlp_H64_WD0.01_none",
+    "encoder": "prott5",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "prott5_mean_mlp_H64_WD0.01_balanced",
+    "encoder": "prott5",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "prott5_mean_mlp_H128_WD0.0001_none",
+    "encoder": "prott5",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "prott5_mean_mlp_H128_WD0.0001_balanced",
+    "encoder": "prott5",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "prott5_mean_mlp_H128_WD0.01_none",
+    "encoder": "prott5",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "prott5_mean_mlp_H128_WD0.01_balanced",
+    "encoder": "prott5",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "prott5_mean_std_lr_C0.1_none",
+    "encoder": "prott5",
+    "representation": "mean_std",
+    "learner": "lr",
+    "C": 0.1,
+    "weight": "none",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "prott5_mean_std_lr_C0.1_balanced",
+    "encoder": "prott5",
+    "representation": "mean_std",
+    "learner": "lr",
+    "C": 0.1,
+    "weight": "balanced",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "prott5_mean_std_lr_C1_none",
+    "encoder": "prott5",
+    "representation": "mean_std",
+    "learner": "lr",
+    "C": 1.0,
+    "weight": "none",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "prott5_mean_std_lr_C1_balanced",
+    "encoder": "prott5",
+    "representation": "mean_std",
+    "learner": "lr",
+    "C": 1.0,
+    "weight": "balanced",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "prott5_mean_std_lr_C10_none",
+    "encoder": "prott5",
+    "representation": "mean_std",
+    "learner": "lr",
+    "C": 10.0,
+    "weight": "none",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "prott5_mean_std_lr_C10_balanced",
+    "encoder": "prott5",
+    "representation": "mean_std",
+    "learner": "lr",
+    "C": 10.0,
+    "weight": "balanced",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "prott5_mean_std_svm_C0.1_G0.1_none",
+    "encoder": "prott5",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 0.1,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "prott5_mean_std_svm_C0.1_G0.1_balanced",
+    "encoder": "prott5",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 0.1,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "prott5_mean_std_svm_C0.1_G1_none",
+    "encoder": "prott5",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 1.0,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "prott5_mean_std_svm_C0.1_G1_balanced",
+    "encoder": "prott5",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 1.0,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "prott5_mean_std_svm_C1_G0.1_none",
+    "encoder": "prott5",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 0.1,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "prott5_mean_std_svm_C1_G0.1_balanced",
+    "encoder": "prott5",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 0.1,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "prott5_mean_std_svm_C1_G1_none",
+    "encoder": "prott5",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 1.0,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "prott5_mean_std_svm_C1_G1_balanced",
+    "encoder": "prott5",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 1.0,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "prott5_mean_std_svm_C10_G0.1_none",
+    "encoder": "prott5",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 0.1,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "prott5_mean_std_svm_C10_G0.1_balanced",
+    "encoder": "prott5",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 0.1,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "prott5_mean_std_svm_C10_G1_none",
+    "encoder": "prott5",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 1.0,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "prott5_mean_std_svm_C10_G1_balanced",
+    "encoder": "prott5",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 1.0,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "prott5_mean_std_mlp_H64_WD0.0001_none",
+    "encoder": "prott5",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "prott5_mean_std_mlp_H64_WD0.0001_balanced",
+    "encoder": "prott5",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "prott5_mean_std_mlp_H64_WD0.01_none",
+    "encoder": "prott5",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "prott5_mean_std_mlp_H64_WD0.01_balanced",
+    "encoder": "prott5",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "prott5_mean_std_mlp_H128_WD0.0001_none",
+    "encoder": "prott5",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "prott5_mean_std_mlp_H128_WD0.0001_balanced",
+    "encoder": "prott5",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "prott5_mean_std_mlp_H128_WD0.01_none",
+    "encoder": "prott5",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "prott5_mean_std_mlp_H128_WD0.01_balanced",
+    "encoder": "prott5",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "prott5_residue_attention_mlp_H64_WD0.0001_none",
+    "encoder": "prott5",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "prott5_residue_attention_mlp_H64_WD0.0001_balanced",
+    "encoder": "prott5",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "prott5_residue_attention_mlp_H64_WD0.01_none",
+    "encoder": "prott5",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "prott5_residue_attention_mlp_H64_WD0.01_balanced",
+    "encoder": "prott5",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "prott5_residue_attention_mlp_H128_WD0.0001_none",
+    "encoder": "prott5",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "prott5_residue_attention_mlp_H128_WD0.0001_balanced",
+    "encoder": "prott5",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "prott5_residue_attention_mlp_H128_WD0.01_none",
+    "encoder": "prott5",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "prott5_residue_attention_mlp_H128_WD0.01_balanced",
+    "encoder": "prott5",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "prott5_dual_attention_mlp_H64_WD0.0001_none",
+    "encoder": "prott5",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "prott5_dual_attention_mlp_H64_WD0.0001_balanced",
+    "encoder": "prott5",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "prott5_dual_attention_mlp_H64_WD0.01_none",
+    "encoder": "prott5",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "prott5_dual_attention_mlp_H64_WD0.01_balanced",
+    "encoder": "prott5",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "prott5_dual_attention_mlp_H128_WD0.0001_none",
+    "encoder": "prott5",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "prott5_dual_attention_mlp_H128_WD0.0001_balanced",
+    "encoder": "prott5",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "prott5_dual_attention_mlp_H128_WD0.01_none",
+    "encoder": "prott5",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "prott5_dual_attention_mlp_H128_WD0.01_balanced",
+    "encoder": "prott5",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "ankh_mean_lr_C0.1_none",
+    "encoder": "ankh",
+    "representation": "mean",
+    "learner": "lr",
+    "C": 0.1,
+    "weight": "none",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "ankh_mean_lr_C0.1_balanced",
+    "encoder": "ankh",
+    "representation": "mean",
+    "learner": "lr",
+    "C": 0.1,
+    "weight": "balanced",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "ankh_mean_lr_C1_none",
+    "encoder": "ankh",
+    "representation": "mean",
+    "learner": "lr",
+    "C": 1.0,
+    "weight": "none",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "ankh_mean_lr_C1_balanced",
+    "encoder": "ankh",
+    "representation": "mean",
+    "learner": "lr",
+    "C": 1.0,
+    "weight": "balanced",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "ankh_mean_lr_C10_none",
+    "encoder": "ankh",
+    "representation": "mean",
+    "learner": "lr",
+    "C": 10.0,
+    "weight": "none",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "ankh_mean_lr_C10_balanced",
+    "encoder": "ankh",
+    "representation": "mean",
+    "learner": "lr",
+    "C": 10.0,
+    "weight": "balanced",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "ankh_mean_svm_C0.1_G0.1_none",
+    "encoder": "ankh",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 0.1,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "ankh_mean_svm_C0.1_G0.1_balanced",
+    "encoder": "ankh",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 0.1,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "ankh_mean_svm_C0.1_G1_none",
+    "encoder": "ankh",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 1.0,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "ankh_mean_svm_C0.1_G1_balanced",
+    "encoder": "ankh",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 1.0,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "ankh_mean_svm_C1_G0.1_none",
+    "encoder": "ankh",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 0.1,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "ankh_mean_svm_C1_G0.1_balanced",
+    "encoder": "ankh",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 0.1,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "ankh_mean_svm_C1_G1_none",
+    "encoder": "ankh",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 1.0,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "ankh_mean_svm_C1_G1_balanced",
+    "encoder": "ankh",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 1.0,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "ankh_mean_svm_C10_G0.1_none",
+    "encoder": "ankh",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 0.1,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "ankh_mean_svm_C10_G0.1_balanced",
+    "encoder": "ankh",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 0.1,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "ankh_mean_svm_C10_G1_none",
+    "encoder": "ankh",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 1.0,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "ankh_mean_svm_C10_G1_balanced",
+    "encoder": "ankh",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 1.0,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "ankh_mean_mlp_H64_WD0.0001_none",
+    "encoder": "ankh",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "ankh_mean_mlp_H64_WD0.0001_balanced",
+    "encoder": "ankh",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "ankh_mean_mlp_H64_WD0.01_none",
+    "encoder": "ankh",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "ankh_mean_mlp_H64_WD0.01_balanced",
+    "encoder": "ankh",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "ankh_mean_mlp_H128_WD0.0001_none",
+    "encoder": "ankh",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "ankh_mean_mlp_H128_WD0.0001_balanced",
+    "encoder": "ankh",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "ankh_mean_mlp_H128_WD0.01_none",
+    "encoder": "ankh",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "ankh_mean_mlp_H128_WD0.01_balanced",
+    "encoder": "ankh",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "ankh_mean_std_lr_C0.1_none",
+    "encoder": "ankh",
+    "representation": "mean_std",
+    "learner": "lr",
+    "C": 0.1,
+    "weight": "none",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "ankh_mean_std_lr_C0.1_balanced",
+    "encoder": "ankh",
+    "representation": "mean_std",
+    "learner": "lr",
+    "C": 0.1,
+    "weight": "balanced",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "ankh_mean_std_lr_C1_none",
+    "encoder": "ankh",
+    "representation": "mean_std",
+    "learner": "lr",
+    "C": 1.0,
+    "weight": "none",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "ankh_mean_std_lr_C1_balanced",
+    "encoder": "ankh",
+    "representation": "mean_std",
+    "learner": "lr",
+    "C": 1.0,
+    "weight": "balanced",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "ankh_mean_std_lr_C10_none",
+    "encoder": "ankh",
+    "representation": "mean_std",
+    "learner": "lr",
+    "C": 10.0,
+    "weight": "none",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "ankh_mean_std_lr_C10_balanced",
+    "encoder": "ankh",
+    "representation": "mean_std",
+    "learner": "lr",
+    "C": 10.0,
+    "weight": "balanced",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "ankh_mean_std_svm_C0.1_G0.1_none",
+    "encoder": "ankh",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 0.1,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "ankh_mean_std_svm_C0.1_G0.1_balanced",
+    "encoder": "ankh",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 0.1,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "ankh_mean_std_svm_C0.1_G1_none",
+    "encoder": "ankh",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 1.0,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "ankh_mean_std_svm_C0.1_G1_balanced",
+    "encoder": "ankh",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 1.0,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "ankh_mean_std_svm_C1_G0.1_none",
+    "encoder": "ankh",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 0.1,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "ankh_mean_std_svm_C1_G0.1_balanced",
+    "encoder": "ankh",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 0.1,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "ankh_mean_std_svm_C1_G1_none",
+    "encoder": "ankh",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 1.0,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "ankh_mean_std_svm_C1_G1_balanced",
+    "encoder": "ankh",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 1.0,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "ankh_mean_std_svm_C10_G0.1_none",
+    "encoder": "ankh",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 0.1,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "ankh_mean_std_svm_C10_G0.1_balanced",
+    "encoder": "ankh",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 0.1,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "ankh_mean_std_svm_C10_G1_none",
+    "encoder": "ankh",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 1.0,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "ankh_mean_std_svm_C10_G1_balanced",
+    "encoder": "ankh",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 1.0,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "ankh_mean_std_mlp_H64_WD0.0001_none",
+    "encoder": "ankh",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "ankh_mean_std_mlp_H64_WD0.0001_balanced",
+    "encoder": "ankh",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "ankh_mean_std_mlp_H64_WD0.01_none",
+    "encoder": "ankh",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "ankh_mean_std_mlp_H64_WD0.01_balanced",
+    "encoder": "ankh",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "ankh_mean_std_mlp_H128_WD0.0001_none",
+    "encoder": "ankh",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "ankh_mean_std_mlp_H128_WD0.0001_balanced",
+    "encoder": "ankh",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "ankh_mean_std_mlp_H128_WD0.01_none",
+    "encoder": "ankh",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "ankh_mean_std_mlp_H128_WD0.01_balanced",
+    "encoder": "ankh",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "ankh_residue_attention_mlp_H64_WD0.0001_none",
+    "encoder": "ankh",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "ankh_residue_attention_mlp_H64_WD0.0001_balanced",
+    "encoder": "ankh",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "ankh_residue_attention_mlp_H64_WD0.01_none",
+    "encoder": "ankh",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "ankh_residue_attention_mlp_H64_WD0.01_balanced",
+    "encoder": "ankh",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "ankh_residue_attention_mlp_H128_WD0.0001_none",
+    "encoder": "ankh",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "ankh_residue_attention_mlp_H128_WD0.0001_balanced",
+    "encoder": "ankh",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "ankh_residue_attention_mlp_H128_WD0.01_none",
+    "encoder": "ankh",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "ankh_residue_attention_mlp_H128_WD0.01_balanced",
+    "encoder": "ankh",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "ankh_dual_attention_mlp_H64_WD0.0001_none",
+    "encoder": "ankh",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "ankh_dual_attention_mlp_H64_WD0.0001_balanced",
+    "encoder": "ankh",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "ankh_dual_attention_mlp_H64_WD0.01_none",
+    "encoder": "ankh",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "ankh_dual_attention_mlp_H64_WD0.01_balanced",
+    "encoder": "ankh",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "ankh_dual_attention_mlp_H128_WD0.0001_none",
+    "encoder": "ankh",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "ankh_dual_attention_mlp_H128_WD0.0001_balanced",
+    "encoder": "ankh",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "ankh_dual_attention_mlp_H128_WD0.01_none",
+    "encoder": "ankh",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "ankh_dual_attention_mlp_H128_WD0.01_balanced",
+    "encoder": "ankh",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esm_mean_lr_C0.1_none",
+    "encoder": "esm",
+    "representation": "mean",
+    "learner": "lr",
+    "C": 0.1,
+    "weight": "none",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "esm_mean_lr_C0.1_balanced",
+    "encoder": "esm",
+    "representation": "mean",
+    "learner": "lr",
+    "C": 0.1,
+    "weight": "balanced",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "esm_mean_lr_C1_none",
+    "encoder": "esm",
+    "representation": "mean",
+    "learner": "lr",
+    "C": 1.0,
+    "weight": "none",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "esm_mean_lr_C1_balanced",
+    "encoder": "esm",
+    "representation": "mean",
+    "learner": "lr",
+    "C": 1.0,
+    "weight": "balanced",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "esm_mean_lr_C10_none",
+    "encoder": "esm",
+    "representation": "mean",
+    "learner": "lr",
+    "C": 10.0,
+    "weight": "none",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "esm_mean_lr_C10_balanced",
+    "encoder": "esm",
+    "representation": "mean",
+    "learner": "lr",
+    "C": 10.0,
+    "weight": "balanced",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "esm_mean_svm_C0.1_G0.1_none",
+    "encoder": "esm",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 0.1,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esm_mean_svm_C0.1_G0.1_balanced",
+    "encoder": "esm",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 0.1,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esm_mean_svm_C0.1_G1_none",
+    "encoder": "esm",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 1.0,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esm_mean_svm_C0.1_G1_balanced",
+    "encoder": "esm",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 1.0,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esm_mean_svm_C1_G0.1_none",
+    "encoder": "esm",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 0.1,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esm_mean_svm_C1_G0.1_balanced",
+    "encoder": "esm",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 0.1,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esm_mean_svm_C1_G1_none",
+    "encoder": "esm",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 1.0,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esm_mean_svm_C1_G1_balanced",
+    "encoder": "esm",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 1.0,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esm_mean_svm_C10_G0.1_none",
+    "encoder": "esm",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 0.1,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esm_mean_svm_C10_G0.1_balanced",
+    "encoder": "esm",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 0.1,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esm_mean_svm_C10_G1_none",
+    "encoder": "esm",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 1.0,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esm_mean_svm_C10_G1_balanced",
+    "encoder": "esm",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 1.0,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esm_mean_mlp_H64_WD0.0001_none",
+    "encoder": "esm",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esm_mean_mlp_H64_WD0.0001_balanced",
+    "encoder": "esm",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esm_mean_mlp_H64_WD0.01_none",
+    "encoder": "esm",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esm_mean_mlp_H64_WD0.01_balanced",
+    "encoder": "esm",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esm_mean_mlp_H128_WD0.0001_none",
+    "encoder": "esm",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esm_mean_mlp_H128_WD0.0001_balanced",
+    "encoder": "esm",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esm_mean_mlp_H128_WD0.01_none",
+    "encoder": "esm",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esm_mean_mlp_H128_WD0.01_balanced",
+    "encoder": "esm",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esm_mean_std_lr_C0.1_none",
+    "encoder": "esm",
+    "representation": "mean_std",
+    "learner": "lr",
+    "C": 0.1,
+    "weight": "none",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "esm_mean_std_lr_C0.1_balanced",
+    "encoder": "esm",
+    "representation": "mean_std",
+    "learner": "lr",
+    "C": 0.1,
+    "weight": "balanced",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "esm_mean_std_lr_C1_none",
+    "encoder": "esm",
+    "representation": "mean_std",
+    "learner": "lr",
+    "C": 1.0,
+    "weight": "none",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "esm_mean_std_lr_C1_balanced",
+    "encoder": "esm",
+    "representation": "mean_std",
+    "learner": "lr",
+    "C": 1.0,
+    "weight": "balanced",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "esm_mean_std_lr_C10_none",
+    "encoder": "esm",
+    "representation": "mean_std",
+    "learner": "lr",
+    "C": 10.0,
+    "weight": "none",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "esm_mean_std_lr_C10_balanced",
+    "encoder": "esm",
+    "representation": "mean_std",
+    "learner": "lr",
+    "C": 10.0,
+    "weight": "balanced",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "esm_mean_std_svm_C0.1_G0.1_none",
+    "encoder": "esm",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 0.1,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esm_mean_std_svm_C0.1_G0.1_balanced",
+    "encoder": "esm",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 0.1,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esm_mean_std_svm_C0.1_G1_none",
+    "encoder": "esm",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 1.0,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esm_mean_std_svm_C0.1_G1_balanced",
+    "encoder": "esm",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 1.0,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esm_mean_std_svm_C1_G0.1_none",
+    "encoder": "esm",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 0.1,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esm_mean_std_svm_C1_G0.1_balanced",
+    "encoder": "esm",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 0.1,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esm_mean_std_svm_C1_G1_none",
+    "encoder": "esm",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 1.0,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esm_mean_std_svm_C1_G1_balanced",
+    "encoder": "esm",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 1.0,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esm_mean_std_svm_C10_G0.1_none",
+    "encoder": "esm",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 0.1,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esm_mean_std_svm_C10_G0.1_balanced",
+    "encoder": "esm",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 0.1,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esm_mean_std_svm_C10_G1_none",
+    "encoder": "esm",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 1.0,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esm_mean_std_svm_C10_G1_balanced",
+    "encoder": "esm",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 1.0,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esm_mean_std_mlp_H64_WD0.0001_none",
+    "encoder": "esm",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esm_mean_std_mlp_H64_WD0.0001_balanced",
+    "encoder": "esm",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esm_mean_std_mlp_H64_WD0.01_none",
+    "encoder": "esm",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esm_mean_std_mlp_H64_WD0.01_balanced",
+    "encoder": "esm",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esm_mean_std_mlp_H128_WD0.0001_none",
+    "encoder": "esm",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esm_mean_std_mlp_H128_WD0.0001_balanced",
+    "encoder": "esm",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esm_mean_std_mlp_H128_WD0.01_none",
+    "encoder": "esm",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esm_mean_std_mlp_H128_WD0.01_balanced",
+    "encoder": "esm",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esm_residue_attention_mlp_H64_WD0.0001_none",
+    "encoder": "esm",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esm_residue_attention_mlp_H64_WD0.0001_balanced",
+    "encoder": "esm",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esm_residue_attention_mlp_H64_WD0.01_none",
+    "encoder": "esm",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esm_residue_attention_mlp_H64_WD0.01_balanced",
+    "encoder": "esm",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esm_residue_attention_mlp_H128_WD0.0001_none",
+    "encoder": "esm",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esm_residue_attention_mlp_H128_WD0.0001_balanced",
+    "encoder": "esm",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esm_residue_attention_mlp_H128_WD0.01_none",
+    "encoder": "esm",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esm_residue_attention_mlp_H128_WD0.01_balanced",
+    "encoder": "esm",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esm_dual_attention_mlp_H64_WD0.0001_none",
+    "encoder": "esm",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esm_dual_attention_mlp_H64_WD0.0001_balanced",
+    "encoder": "esm",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esm_dual_attention_mlp_H64_WD0.01_none",
+    "encoder": "esm",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esm_dual_attention_mlp_H64_WD0.01_balanced",
+    "encoder": "esm",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esm_dual_attention_mlp_H128_WD0.0001_none",
+    "encoder": "esm",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esm_dual_attention_mlp_H128_WD0.0001_balanced",
+    "encoder": "esm",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esm_dual_attention_mlp_H128_WD0.01_none",
+    "encoder": "esm",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esm_dual_attention_mlp_H128_WD0.01_balanced",
+    "encoder": "esm",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "protbert_mean_lr_C0.1_none",
+    "encoder": "protbert",
+    "representation": "mean",
+    "learner": "lr",
+    "C": 0.1,
+    "weight": "none",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "protbert_mean_lr_C0.1_balanced",
+    "encoder": "protbert",
+    "representation": "mean",
+    "learner": "lr",
+    "C": 0.1,
+    "weight": "balanced",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "protbert_mean_lr_C1_none",
+    "encoder": "protbert",
+    "representation": "mean",
+    "learner": "lr",
+    "C": 1.0,
+    "weight": "none",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "protbert_mean_lr_C1_balanced",
+    "encoder": "protbert",
+    "representation": "mean",
+    "learner": "lr",
+    "C": 1.0,
+    "weight": "balanced",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "protbert_mean_lr_C10_none",
+    "encoder": "protbert",
+    "representation": "mean",
+    "learner": "lr",
+    "C": 10.0,
+    "weight": "none",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "protbert_mean_lr_C10_balanced",
+    "encoder": "protbert",
+    "representation": "mean",
+    "learner": "lr",
+    "C": 10.0,
+    "weight": "balanced",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "protbert_mean_svm_C0.1_G0.1_none",
+    "encoder": "protbert",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 0.1,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "protbert_mean_svm_C0.1_G0.1_balanced",
+    "encoder": "protbert",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 0.1,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "protbert_mean_svm_C0.1_G1_none",
+    "encoder": "protbert",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 1.0,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "protbert_mean_svm_C0.1_G1_balanced",
+    "encoder": "protbert",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 1.0,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "protbert_mean_svm_C1_G0.1_none",
+    "encoder": "protbert",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 0.1,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "protbert_mean_svm_C1_G0.1_balanced",
+    "encoder": "protbert",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 0.1,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "protbert_mean_svm_C1_G1_none",
+    "encoder": "protbert",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 1.0,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "protbert_mean_svm_C1_G1_balanced",
+    "encoder": "protbert",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 1.0,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "protbert_mean_svm_C10_G0.1_none",
+    "encoder": "protbert",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 0.1,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "protbert_mean_svm_C10_G0.1_balanced",
+    "encoder": "protbert",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 0.1,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "protbert_mean_svm_C10_G1_none",
+    "encoder": "protbert",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 1.0,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "protbert_mean_svm_C10_G1_balanced",
+    "encoder": "protbert",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 1.0,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "protbert_mean_mlp_H64_WD0.0001_none",
+    "encoder": "protbert",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "protbert_mean_mlp_H64_WD0.0001_balanced",
+    "encoder": "protbert",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "protbert_mean_mlp_H64_WD0.01_none",
+    "encoder": "protbert",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "protbert_mean_mlp_H64_WD0.01_balanced",
+    "encoder": "protbert",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "protbert_mean_mlp_H128_WD0.0001_none",
+    "encoder": "protbert",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "protbert_mean_mlp_H128_WD0.0001_balanced",
+    "encoder": "protbert",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "protbert_mean_mlp_H128_WD0.01_none",
+    "encoder": "protbert",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "protbert_mean_mlp_H128_WD0.01_balanced",
+    "encoder": "protbert",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "protbert_mean_std_lr_C0.1_none",
+    "encoder": "protbert",
+    "representation": "mean_std",
+    "learner": "lr",
+    "C": 0.1,
+    "weight": "none",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "protbert_mean_std_lr_C0.1_balanced",
+    "encoder": "protbert",
+    "representation": "mean_std",
+    "learner": "lr",
+    "C": 0.1,
+    "weight": "balanced",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "protbert_mean_std_lr_C1_none",
+    "encoder": "protbert",
+    "representation": "mean_std",
+    "learner": "lr",
+    "C": 1.0,
+    "weight": "none",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "protbert_mean_std_lr_C1_balanced",
+    "encoder": "protbert",
+    "representation": "mean_std",
+    "learner": "lr",
+    "C": 1.0,
+    "weight": "balanced",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "protbert_mean_std_lr_C10_none",
+    "encoder": "protbert",
+    "representation": "mean_std",
+    "learner": "lr",
+    "C": 10.0,
+    "weight": "none",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "protbert_mean_std_lr_C10_balanced",
+    "encoder": "protbert",
+    "representation": "mean_std",
+    "learner": "lr",
+    "C": 10.0,
+    "weight": "balanced",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "protbert_mean_std_svm_C0.1_G0.1_none",
+    "encoder": "protbert",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 0.1,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "protbert_mean_std_svm_C0.1_G0.1_balanced",
+    "encoder": "protbert",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 0.1,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "protbert_mean_std_svm_C0.1_G1_none",
+    "encoder": "protbert",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 1.0,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "protbert_mean_std_svm_C0.1_G1_balanced",
+    "encoder": "protbert",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 1.0,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "protbert_mean_std_svm_C1_G0.1_none",
+    "encoder": "protbert",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 0.1,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "protbert_mean_std_svm_C1_G0.1_balanced",
+    "encoder": "protbert",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 0.1,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "protbert_mean_std_svm_C1_G1_none",
+    "encoder": "protbert",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 1.0,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "protbert_mean_std_svm_C1_G1_balanced",
+    "encoder": "protbert",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 1.0,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "protbert_mean_std_svm_C10_G0.1_none",
+    "encoder": "protbert",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 0.1,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "protbert_mean_std_svm_C10_G0.1_balanced",
+    "encoder": "protbert",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 0.1,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "protbert_mean_std_svm_C10_G1_none",
+    "encoder": "protbert",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 1.0,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "protbert_mean_std_svm_C10_G1_balanced",
+    "encoder": "protbert",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 1.0,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "protbert_mean_std_mlp_H64_WD0.0001_none",
+    "encoder": "protbert",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "protbert_mean_std_mlp_H64_WD0.0001_balanced",
+    "encoder": "protbert",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "protbert_mean_std_mlp_H64_WD0.01_none",
+    "encoder": "protbert",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "protbert_mean_std_mlp_H64_WD0.01_balanced",
+    "encoder": "protbert",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "protbert_mean_std_mlp_H128_WD0.0001_none",
+    "encoder": "protbert",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "protbert_mean_std_mlp_H128_WD0.0001_balanced",
+    "encoder": "protbert",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "protbert_mean_std_mlp_H128_WD0.01_none",
+    "encoder": "protbert",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "protbert_mean_std_mlp_H128_WD0.01_balanced",
+    "encoder": "protbert",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "protbert_residue_attention_mlp_H64_WD0.0001_none",
+    "encoder": "protbert",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "protbert_residue_attention_mlp_H64_WD0.0001_balanced",
+    "encoder": "protbert",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "protbert_residue_attention_mlp_H64_WD0.01_none",
+    "encoder": "protbert",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "protbert_residue_attention_mlp_H64_WD0.01_balanced",
+    "encoder": "protbert",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "protbert_residue_attention_mlp_H128_WD0.0001_none",
+    "encoder": "protbert",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "protbert_residue_attention_mlp_H128_WD0.0001_balanced",
+    "encoder": "protbert",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "protbert_residue_attention_mlp_H128_WD0.01_none",
+    "encoder": "protbert",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "protbert_residue_attention_mlp_H128_WD0.01_balanced",
+    "encoder": "protbert",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "protbert_dual_attention_mlp_H64_WD0.0001_none",
+    "encoder": "protbert",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "protbert_dual_attention_mlp_H64_WD0.0001_balanced",
+    "encoder": "protbert",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "protbert_dual_attention_mlp_H64_WD0.01_none",
+    "encoder": "protbert",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "protbert_dual_attention_mlp_H64_WD0.01_balanced",
+    "encoder": "protbert",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "protbert_dual_attention_mlp_H128_WD0.0001_none",
+    "encoder": "protbert",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "protbert_dual_attention_mlp_H128_WD0.0001_balanced",
+    "encoder": "protbert",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "protbert_dual_attention_mlp_H128_WD0.01_none",
+    "encoder": "protbert",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "protbert_dual_attention_mlp_H128_WD0.01_balanced",
+    "encoder": "protbert",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esmc_mean_lr_C0.1_none",
+    "encoder": "esmc",
+    "representation": "mean",
+    "learner": "lr",
+    "C": 0.1,
+    "weight": "none",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "esmc_mean_lr_C0.1_balanced",
+    "encoder": "esmc",
+    "representation": "mean",
+    "learner": "lr",
+    "C": 0.1,
+    "weight": "balanced",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "esmc_mean_lr_C1_none",
+    "encoder": "esmc",
+    "representation": "mean",
+    "learner": "lr",
+    "C": 1.0,
+    "weight": "none",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "esmc_mean_lr_C1_balanced",
+    "encoder": "esmc",
+    "representation": "mean",
+    "learner": "lr",
+    "C": 1.0,
+    "weight": "balanced",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "esmc_mean_lr_C10_none",
+    "encoder": "esmc",
+    "representation": "mean",
+    "learner": "lr",
+    "C": 10.0,
+    "weight": "none",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "esmc_mean_lr_C10_balanced",
+    "encoder": "esmc",
+    "representation": "mean",
+    "learner": "lr",
+    "C": 10.0,
+    "weight": "balanced",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "esmc_mean_svm_C0.1_G0.1_none",
+    "encoder": "esmc",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 0.1,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esmc_mean_svm_C0.1_G0.1_balanced",
+    "encoder": "esmc",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 0.1,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esmc_mean_svm_C0.1_G1_none",
+    "encoder": "esmc",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 1.0,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esmc_mean_svm_C0.1_G1_balanced",
+    "encoder": "esmc",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 1.0,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esmc_mean_svm_C1_G0.1_none",
+    "encoder": "esmc",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 0.1,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esmc_mean_svm_C1_G0.1_balanced",
+    "encoder": "esmc",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 0.1,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esmc_mean_svm_C1_G1_none",
+    "encoder": "esmc",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 1.0,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esmc_mean_svm_C1_G1_balanced",
+    "encoder": "esmc",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 1.0,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esmc_mean_svm_C10_G0.1_none",
+    "encoder": "esmc",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 0.1,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esmc_mean_svm_C10_G0.1_balanced",
+    "encoder": "esmc",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 0.1,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esmc_mean_svm_C10_G1_none",
+    "encoder": "esmc",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 1.0,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esmc_mean_svm_C10_G1_balanced",
+    "encoder": "esmc",
+    "representation": "mean",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 1.0,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esmc_mean_mlp_H64_WD0.0001_none",
+    "encoder": "esmc",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esmc_mean_mlp_H64_WD0.0001_balanced",
+    "encoder": "esmc",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esmc_mean_mlp_H64_WD0.01_none",
+    "encoder": "esmc",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esmc_mean_mlp_H64_WD0.01_balanced",
+    "encoder": "esmc",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esmc_mean_mlp_H128_WD0.0001_none",
+    "encoder": "esmc",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esmc_mean_mlp_H128_WD0.0001_balanced",
+    "encoder": "esmc",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esmc_mean_mlp_H128_WD0.01_none",
+    "encoder": "esmc",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esmc_mean_mlp_H128_WD0.01_balanced",
+    "encoder": "esmc",
+    "representation": "mean",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esmc_mean_std_lr_C0.1_none",
+    "encoder": "esmc",
+    "representation": "mean_std",
+    "learner": "lr",
+    "C": 0.1,
+    "weight": "none",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "esmc_mean_std_lr_C0.1_balanced",
+    "encoder": "esmc",
+    "representation": "mean_std",
+    "learner": "lr",
+    "C": 0.1,
+    "weight": "balanced",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "esmc_mean_std_lr_C1_none",
+    "encoder": "esmc",
+    "representation": "mean_std",
+    "learner": "lr",
+    "C": 1.0,
+    "weight": "none",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "esmc_mean_std_lr_C1_balanced",
+    "encoder": "esmc",
+    "representation": "mean_std",
+    "learner": "lr",
+    "C": 1.0,
+    "weight": "balanced",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "esmc_mean_std_lr_C10_none",
+    "encoder": "esmc",
+    "representation": "mean_std",
+    "learner": "lr",
+    "C": 10.0,
+    "weight": "none",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "esmc_mean_std_lr_C10_balanced",
+    "encoder": "esmc",
+    "representation": "mean_std",
+    "learner": "lr",
+    "C": 10.0,
+    "weight": "balanced",
+    "solver": "lbfgs",
+    "tol": 1e-05,
+    "max_iter_attempts": [
+      5000,
+      10000,
+      20000
+    ]
+  },
+  {
+    "id": "esmc_mean_std_svm_C0.1_G0.1_none",
+    "encoder": "esmc",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 0.1,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esmc_mean_std_svm_C0.1_G0.1_balanced",
+    "encoder": "esmc",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 0.1,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esmc_mean_std_svm_C0.1_G1_none",
+    "encoder": "esmc",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 1.0,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esmc_mean_std_svm_C0.1_G1_balanced",
+    "encoder": "esmc",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 0.1,
+    "gamma_multiplier": 1.0,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esmc_mean_std_svm_C1_G0.1_none",
+    "encoder": "esmc",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 0.1,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esmc_mean_std_svm_C1_G0.1_balanced",
+    "encoder": "esmc",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 0.1,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esmc_mean_std_svm_C1_G1_none",
+    "encoder": "esmc",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 1.0,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esmc_mean_std_svm_C1_G1_balanced",
+    "encoder": "esmc",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 1.0,
+    "gamma_multiplier": 1.0,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esmc_mean_std_svm_C10_G0.1_none",
+    "encoder": "esmc",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 0.1,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esmc_mean_std_svm_C10_G0.1_balanced",
+    "encoder": "esmc",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 0.1,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esmc_mean_std_svm_C10_G1_none",
+    "encoder": "esmc",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 1.0,
+    "weight": "none",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esmc_mean_std_svm_C10_G1_balanced",
+    "encoder": "esmc",
+    "representation": "mean_std",
+    "learner": "svm",
+    "C": 10.0,
+    "gamma_multiplier": 1.0,
+    "weight": "balanced",
+    "kernel": "rbf",
+    "tol": 0.001,
+    "max_iter": -1,
+    "cache_size": 512
+  },
+  {
+    "id": "esmc_mean_std_mlp_H64_WD0.0001_none",
+    "encoder": "esmc",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esmc_mean_std_mlp_H64_WD0.0001_balanced",
+    "encoder": "esmc",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esmc_mean_std_mlp_H64_WD0.01_none",
+    "encoder": "esmc",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esmc_mean_std_mlp_H64_WD0.01_balanced",
+    "encoder": "esmc",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esmc_mean_std_mlp_H128_WD0.0001_none",
+    "encoder": "esmc",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esmc_mean_std_mlp_H128_WD0.0001_balanced",
+    "encoder": "esmc",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esmc_mean_std_mlp_H128_WD0.01_none",
+    "encoder": "esmc",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esmc_mean_std_mlp_H128_WD0.01_balanced",
+    "encoder": "esmc",
+    "representation": "mean_std",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esmc_residue_attention_mlp_H64_WD0.0001_none",
+    "encoder": "esmc",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esmc_residue_attention_mlp_H64_WD0.0001_balanced",
+    "encoder": "esmc",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esmc_residue_attention_mlp_H64_WD0.01_none",
+    "encoder": "esmc",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esmc_residue_attention_mlp_H64_WD0.01_balanced",
+    "encoder": "esmc",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esmc_residue_attention_mlp_H128_WD0.0001_none",
+    "encoder": "esmc",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esmc_residue_attention_mlp_H128_WD0.0001_balanced",
+    "encoder": "esmc",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esmc_residue_attention_mlp_H128_WD0.01_none",
+    "encoder": "esmc",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esmc_residue_attention_mlp_H128_WD0.01_balanced",
+    "encoder": "esmc",
+    "representation": "residue_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esmc_dual_attention_mlp_H64_WD0.0001_none",
+    "encoder": "esmc",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esmc_dual_attention_mlp_H64_WD0.0001_balanced",
+    "encoder": "esmc",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esmc_dual_attention_mlp_H64_WD0.01_none",
+    "encoder": "esmc",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esmc_dual_attention_mlp_H64_WD0.01_balanced",
+    "encoder": "esmc",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      64,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esmc_dual_attention_mlp_H128_WD0.0001_none",
+    "encoder": "esmc",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esmc_dual_attention_mlp_H128_WD0.0001_balanced",
+    "encoder": "esmc",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.0001,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esmc_dual_attention_mlp_H128_WD0.01_none",
+    "encoder": "esmc",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "none",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  },
+  {
+    "id": "esmc_dual_attention_mlp_H128_WD0.01_balanced",
+    "encoder": "esmc",
+    "representation": "dual_attention",
+    "learner": "mlp",
+    "widths": [
+      128,
+      32
+    ],
+    "weight_decay": 0.01,
+    "weight": "balanced",
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "max_epochs": 100,
+    "patience": 10,
+    "dropout": 0.3,
+    "gradient_clip": 1.0,
+    "seed": 37
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "title": "BacRootFit: predicting bacterial root colonization-associated genes using protein language models — software",
+  "upload_type": "software",
+  "description": "Manuscript-aligned BacRootFit software, source provenance, portable prediction/training/evaluation commands and a static evidence browser. Versioned data, raw ProtT5 means, development/deployment model bundles and stored experiment results are supplied as separately checksummed release assets. Code is MIT; original curation contributions are CC BY 4.0; third-party terms remain applicable.",
+  "creators": [
+    {"name": "Yan, Shaocheng", "affiliation": "Beihang University"},
+    {"name": "Liu, Hong", "affiliation": "Beihang University"},
+    {"name": "Fu, Yuming", "affiliation": "Beihang University"}
+  ],
+  "version": "1.0.0",
+  "license": "mit",
+  "keywords": ["root colonization", "protein language model", "ProtT5", "experimental evidence", "bacterial protein classification"]
+}

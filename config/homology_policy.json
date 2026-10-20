@@ -1,0 +1,23 @@
+{
+  "identity": 0.3,
+  "both_coverage": 0.8,
+  "evalue": 0.001,
+  "identity_definition": "identical aligned residues / alignment columns including gaps; alignment-mode3 seq-id-mode0",
+  "coverage_definition": "inclusive aligned query/target coordinate spans divided by respective full sequence lengths",
+  "decisions": "integer alignment count/coordinate cross-products, not rounded fident/qcov/tcov display fields",
+  "inheritance": "union all original parent components, including excluded-parent bridge paths; never split inherited groups",
+  "search_scope": "all 36485 full-QC v0.10 parent sequences, irrespective of labels; retained14505 only enter training",
+  "broad_search": {
+    "min_seq_id": 0,
+    "both_coverage": 0.5,
+    "sensitivity": 7.5,
+    "max_seqs": 50000,
+    "max_accept": 50000,
+    "max_rejected": 50000
+  },
+  "split": "component containing ANY old internal test member -> test; all others -> development; no score/label-based movement",
+  "checks": "both directions development/test, each pool/OOF validation, each actual train/monitor; union discoveries and repeat all checks",
+  "split_seed": 37,
+  "not_exhaustive_pairwise_proof": true,
+  "search_version": "8cc5ce367b5638c4306c2d7cfc652dd099a4643f"
+}

@@ -1,0 +1,351 @@
+{
+  "version": "V27research_repaired340_20261017",
+  "status": "REPAIRED_GRAPH_AND_SPLITS_FROZEN_BEFORE_ANY_FIT",
+  "user_protocol_sha256": "9f645c0025730c5055e6c79bca8507321ca440ad14f5db7ea8fcec31d69734db",
+  "database": "D:\\ESM_project\\RootColonization_DB_v0.12_effect_band_filter",
+  "database_manifest_sha256": "aba52c71999b3747cf85da8d845cfdfe57b90a1c522340d8e21f4b0b20bb4d3c",
+  "n": 14505,
+  "positive": 1036,
+  "negative": 13469,
+  "development_n": 11664,
+  "development_positive": 829,
+  "development_negative": 10835,
+  "internal_test_n": 2841,
+  "internal_test_positive": 207,
+  "internal_test_negative": 2634,
+  "H3": {
+    "n": 1878,
+    "positive": 86,
+    "negative": 1792,
+    "phenotype": "whole_duckweed_surface_initial_colonization",
+    "previously_evaluated": true
+  },
+  "candidate_count": 340,
+  "combinations": 40,
+  "primary_CV_fits": 1700,
+  "encoder_checkpoints": {
+    "prott5": {
+      "repo": "Rostlab/prot_t5_xl_half_uniref50-enc",
+      "revision": "94a6abc029ae13029317b140b7424e012bf8dfbf",
+      "files": [
+        {
+          "file": "config.json",
+          "size": 656,
+          "sha256": "c93cc8c31433fb062cad1825a9c16cde962a2015c8a3b10cfdc5f76a85128db3",
+          "lfs_sha256": null
+        },
+        {
+          "file": "pytorch_model.bin",
+          "size": 2416373051,
+          "sha256": "7f51ba885541c7dc569d46b796af57cc7a2ba7945107dced4f19d1b5ec091157",
+          "lfs_sha256": "7f51ba885541c7dc569d46b796af57cc7a2ba7945107dced4f19d1b5ec091157"
+        },
+        {
+          "file": "special_tokens_map.json",
+          "size": 1787,
+          "sha256": "a4b8dfd3d9a75b0f6f9ddbcb52b147c7377f08aa9310e182829cda2a55684334",
+          "lfs_sha256": null
+        },
+        {
+          "file": "spiece.model",
+          "size": 237990,
+          "sha256": "74da7b4afcde53faa570114b530c726135bdfcdb813dec3abfb27f9d44db7324",
+          "lfs_sha256": null
+        },
+        {
+          "file": "tokenizer_config.json",
+          "size": 25,
+          "sha256": "d3adf2fb21d1242b5c0b72602f02ce5b0c43f767c0f957e3b57a67b2f93bf4f2",
+          "lfs_sha256": null
+        },
+        {
+          "file": "README.md",
+          "size": 6579,
+          "sha256": "394f9eb133ca4e88bb7bfa51ebe858e6a45de480f6ddf11cdf135c50ed1cfe7b",
+          "lfs_sha256": null
+        }
+      ],
+      "license": null
+    },
+    "ankh": {
+      "repo": "ElnaggarLab/ankh-base",
+      "revision": "d99cb6b966530dfc2ae96bc69d9255c2a07308b0",
+      "files": [
+        {
+          "file": "config.json",
+          "size": 826,
+          "sha256": "6cc1a8c7056b14591f7b23a7c01a64a3b62be7eab7a898aa306128926a84ce84",
+          "lfs_sha256": null
+        },
+        {
+          "file": "pytorch_model.bin",
+          "size": 2946066741,
+          "sha256": "9b2a886374f0ff4a893f4e7a989deed76bb2458c8998bd5202ea8e97d92ddcc3",
+          "lfs_sha256": "9b2a886374f0ff4a893f4e7a989deed76bb2458c8998bd5202ea8e97d92ddcc3"
+        },
+        {
+          "file": "special_tokens_map.json",
+          "size": 2585,
+          "sha256": "c8995d2f8037fe3a8cfdef30475365e1c314c417880b75abaf8296e3c05d42d6",
+          "lfs_sha256": null
+        },
+        {
+          "file": "tokenizer.json",
+          "size": 31153,
+          "sha256": "b4533f607d9fd665f2d9d94b0cf71870a6fc2fc2ae7cbd516d0e43a9efb406fd",
+          "lfs_sha256": null
+        },
+        {
+          "file": "tokenizer_config.json",
+          "size": 2819,
+          "sha256": "e51582e899d935a3e03cc0a99c0d7996a68bd6670dda6970ba60b7d9f022fa90",
+          "lfs_sha256": null
+        },
+        {
+          "file": "README.md",
+          "size": 111,
+          "sha256": "966735fc0575f2ff0d8309ec4f59c192cc557f18c78c0fae2bb58bb6dd399cde",
+          "lfs_sha256": null
+        }
+      ],
+      "license": "cc-by-nc-sa-4.0"
+    },
+    "protbert": {
+      "repo": "Rostlab/prot_bert",
+      "revision": "7a894481acdc12202f0a415dd567f6cfdb698908",
+      "files": [
+        {
+          "file": "config.json",
+          "size": 361,
+          "sha256": "44c1e1229d520841e5b29f1dd2292595219061daf0c5f5dacb4f68d1272d69a3",
+          "lfs_sha256": null
+        },
+        {
+          "file": "pytorch_model.bin",
+          "size": 1684058277,
+          "sha256": "6ea3edd26cfefc3111176100ee2a027ed510f9c86b63e5b53a2a050b59f2af9d",
+          "lfs_sha256": "6ea3edd26cfefc3111176100ee2a027ed510f9c86b63e5b53a2a050b59f2af9d"
+        },
+        {
+          "file": "special_tokens_map.json",
+          "size": 112,
+          "sha256": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3",
+          "lfs_sha256": null
+        },
+        {
+          "file": "tokenizer_config.json",
+          "size": 86,
+          "sha256": "73f5e97ab29042bac49dc96f7b8a7a790994509bbd2fe3e9cd4f59affc46c2ce",
+          "lfs_sha256": null
+        },
+        {
+          "file": "vocab.txt",
+          "size": 81,
+          "sha256": "7ea18f4fe3a796c1146f9830d50334a251f368db96bdd0606e78846ca3a30607",
+          "lfs_sha256": null
+        },
+        {
+          "file": "README.md",
+          "size": 7955,
+          "sha256": "ea8dafe458728e36483ffa2cc649290565542aa7314cd05caebf17c5545f6cdf",
+          "lfs_sha256": null
+        }
+      ],
+      "license": null
+    },
+    "esm": {
+      "model_path": "D:\\ESM_project\\model_650m",
+      "model_weights_sha256": {
+        "model.safetensors": "a08adabb949fa67ad3c14b509d04fd60368b35007b0095e3358f81200c4f4db0"
+      },
+      "model_config_sha256": "539095c22efc52a09d6147074ba4ca119f76a890df5901213b2b55f7d2f96b2b",
+      "tokenizer_files_sha256": {
+        "tokenizer_config.json": "7e9161ecdb548ec45a41cbc6b24aa4476fdd418461f491c4207baa99419a29ad",
+        "vocab.txt": "0b82cc0a7c7cf9e567b1e5892d793285b9fbae822c964ca48696f7db44598e03"
+      },
+      "window": 1022,
+      "pooling": "last_hidden_state_residue_mean",
+      "long_sequence_policy": "nonoverlapping_windows_length_weighted_mean",
+      "precision": "float32",
+      "torch_version": "2.13.0+cu130",
+      "transformers_version": "5.18.0",
+      "fasta_path": "D:\\ESM_project\\RootColonization_DB_v0.2\\proteins.faa",
+      "fasta_sha256": "3ba9b9142e1d471c12b63263c274a2b99a8fddf78fbafa02b827669a06fba935",
+      "selected_proteins": 41006,
+      "shape": [
+        41006,
+        1280
+      ],
+      "gpu": "NVIDIA GeForce RTX 5070",
+      "windowed_proteins": 658,
+      "limit": 0
+    },
+    "esmc": {
+      "repo": "biohub/ESMC-600M",
+      "revision": "fcc9d36f5fff97d9bb69a36e3252de61cc78c968",
+      "native_implementation": "transformers.EsmcModel",
+      "trust_remote_code": false
+    }
+  },
+  "encoders": [
+    "prott5",
+    "ankh",
+    "esm",
+    "protbert",
+    "esmc"
+  ],
+  "encoder_dimensions": {
+    "prott5": 1024,
+    "ankh": 768,
+    "esm": 1280,
+    "protbert": 1024,
+    "esmc": 1152
+  },
+  "encoder_precision": {
+    "prott5": "FP16",
+    "ankh": "BF16",
+    "esm": "FP32",
+    "protbert": "FP16",
+    "esmc": "BF16"
+  },
+  "residue_cache": "lossless native hidden dtype: FP16, BF16 uint16 bits, or FP32; full-sequence offsets; no padding/special tokens",
+  "window": 1022,
+  "window_overlap": 0,
+  "mean_std": "FP64 sums and sum-squares over ALL true residues; ddof=0; mean/std output FP32; never average window stds",
+  "fixed_preprocessing": "concatenate selected moments -> per-protein L2 -> actual-training-only StandardScaler",
+  "learned_pooling": {
+    "residue_layer_norm": {
+      "affine": true,
+      "eps": 1e-05
+    },
+    "residue_projection": "Linear(D,128,bias=True) -> GELU",
+    "global_branch": "mean L2 -> training-only StandardScaler -> Linear(D,128,bias=True)",
+    "attention_scorer": "Linear(128,64,bias=True) -> tanh -> Linear(64,1,bias=False) -> softmax over valid elements",
+    "residue_attention": "one protein-wide scorer; padding excluded; 128 pooled values + global128",
+    "fragment_scales": [
+      {
+        "length": 16,
+        "stride": 8
+      },
+      {
+        "length": 64,
+        "stride": 32
+      }
+    ],
+    "fragment_policy": "within each encoder window only; full terminal fragment ending at window end, deduplicated; whole window if shorter than scale",
+    "dual_attention": "separate scorers per scale; global128 + short128 + long128",
+    "fusion": "Linear(concatenated,128) -> LayerNorm -> GELU -> searched MLP head",
+    "all_pooling_and_projection_parameters_trained_within_current_training_fold": true
+  },
+  "neural_training": {
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "dropout": 0.3,
+    "effective_batch": 128,
+    "gradient_clip": 1.0,
+    "max_epochs": 100,
+    "patience": 10,
+    "seed": 37,
+    "precision": "FP32",
+    "tf32": false,
+    "microbatch_padded_residue_budget": 8192,
+    "gradient_accumulation": "sum each microbatch weighted BCE / original effective batch actual size; one clip/update per effective batch; no truncation",
+    "checkpoint": "monitor AUC, lower unweighted BCE, earliest epoch"
+  },
+  "class_weights": "none or N/(2*N_c), actual training rows, applied once; no resampling",
+  "shared_splits": "all340 configs share repaired seed37 SGKF5 and repaired within-pool group monitor; classical uses full pool",
+  "threshold": "one pooled OOF maximum overall MCC on ALL repaired development rows; all distinct boundaries incl all+/-; denominator0=>0; tie higher score; score>=threshold",
+  "selection": "OOF MCC -> OOF AUC -> OOF AP -> pre-registered order; test labels never used for winner",
+  "prespecified_mean_MLP_baseline": "prott5_mean_mlp_H128_WD0.01_balanced",
+  "test_list": "40 combination OOF winners + overall OOF winner + prespecified baseline; de-duplicate; up to 41 full-development refits",
+  "tests": [
+    "internal_full",
+    "internal_balanced",
+    "H3_full",
+    "H3_balanced"
+  ],
+  "top_K": [
+    50,
+    100,
+    200,
+    500
+  ],
+  "final_refit": "own CV best epochs ceil median; train complete development from scratch; refit scaler and weights; inherit OOF threshold",
+  "conditional_ablation": "if primary winner dual_attention: same encoder/hypers mean and residue attention from registry; new short-only, long-only, no-global, parameter-matched mean MLP; five-fold OOF then locked refit",
+  "capacity_match": "nearest hidden width multiple of8 giving mean-only MLP trainable count closest to dual model, no performance-based width search",
+  "stability_seeds": [
+    37,
+    43,
+    101
+  ],
+  "stability_protocol": "fixed winner and original splits; additional seed43/101 full five-fold OOF and own threshold then development refit, no test-based selection",
+  "LOSO": "fixed primary configuration; exclude study, native strains and full-QC homology scopes; within-pool group monitor; rank-only per-study AUC/AP; no contaminated threshold MCC",
+  "deployment": "after report/ablations/LOSO: fixed configuration homology-group five-fold on all14505 -> own pooled OOF threshold/median epochs -> one full refit; internal test results remain attributed only to development-trained models",
+  "retrospective": true,
+  "existing_test_performance_already_seen": true,
+  "ensemble": false,
+  "source_data_labels_or_split_changed": false,
+  "UTC": "2026-10-16T16:26:39.329913+00:00",
+  "parent_experiment": "D:\\ESM_project\\V26research_pooling340_20261015",
+  "snapshot_metadata": "D:\\ESM_project\\V27research_repaired340_20261017\\output\\database",
+  "graph_repair_sha256": "24e07845295cb8cb5ec653e0820a981e4a134264832075fe5306da1d820c2a08",
+  "source_data_labels_changed": false,
+  "source_split_changed": true,
+  "repaired_plan_sha256": "0d66e035ed4d0b066027f329988ff89a86ee26829a3cf9b9ad22b0b147f67ec9",
+  "feature_reuse": "read-only V26 original native residue/mean/std banks; no recomputation, no label-based feature changes",
+  "graph_search": "MMseqs2 full-parent broad plus both-direction split-specific audits; preserve inherited groups; not exhaustive proof",
+  "test_anchor_rule": "all repaired components touching original internal test are assigned test, others development",
+  "original_V26_sealed": true,
+  "primary_winner_not_prespecified": true,
+  "extra_traditional_baselines": {
+    "configurations": 36,
+    "CV_fits": 180,
+    "features": [
+      "AAC20",
+      "AAC20+DPC400+phys10"
+    ],
+    "same_repaired_plan": true,
+    "conditional_matched_control": "if new primary LR/SVM, also refit existing430-feature registry entry with its C/gamma_multiplier/weight; no new search",
+    "protocol_source": "D:\\ESM_project\\V26_publication_evidence_20261016\\output\\protocol.json"
+  },
+  "post_primary_split_sensitivity": {
+    "candidates": "newly selected primary ONLY",
+    "outer_seeds": [
+      43,
+      101,
+      137,
+      211,
+      307
+    ],
+    "inner_seed": 37,
+    "training_seed": 37,
+    "original_split_included_in_descriptive_summary": true,
+    "no_hyperparameter_reselection": true,
+    "retrospective_overlapping_splits": true
+  },
+  "uncertainty": {
+    "bootstrap": 5000,
+    "seed": 20261016,
+    "unit": "repaired homology connected groups",
+    "fixed_models_and_thresholds": true
+  },
+  "automatic_stage_order": [
+    "graph_gate",
+    "cache_gate",
+    "pilot",
+    "340x5search",
+    "development_selection",
+    "locked_refits",
+    "primary_tests",
+    "traditional_baselines",
+    "homology_baselines",
+    "CI",
+    "conditional_ablations_and_initialization",
+    "primary_split_sensitivity",
+    "repaired_LOSO",
+    "evaluation_report",
+    "deployment",
+    "inference_check",
+    "FULL_REPORT_and_manifest"
+  ]
+}

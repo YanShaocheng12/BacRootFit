@@ -1,0 +1,12 @@
+{
+  "status": "retained_original_resource_implementation",
+  "residue_layout": "packed",
+  "microbatch_residue_budget": 65536,
+  "effective_protein_batch": 128,
+  "gradient_accumulation": "sum weighted losses / actual effective protein batch; one clip and AdamW step",
+  "supersedes_implementation_only": "protocol padded microbatch budget8192; packed eliminates padding without changing model or effective batch",
+  "selection_basis": "first-fold training-only memory/runtime and equivalence checks; no model outcome selection",
+  "pilot_sha256": "74d12cf4e4a006b9b83125306a93e61ae0b9fb94068d41a8ba12966400cca6ea",
+  "source": "D:\\ESM_project\\V26research_pooling340_20261015",
+  "no_new_performance_based_resource_selection": true
+}

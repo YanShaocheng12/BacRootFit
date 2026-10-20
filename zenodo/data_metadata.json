@@ -1,0 +1,13 @@
+{
+  "title": "BacRootFit: curated bacterial root-colonization evidence and manuscript reproducibility data",
+  "upload_type": "dataset",
+  "description": "A sequence-traceable collection of 14,505 complete proteins from 21 contributing studies: 1,036 qualified perturbation positives and 13,469 experimentally screened small-effect non-hit controls, with source observations, study-level rules, native-strain sequence mapping and repaired homology-group partitions. Aquitalea magnusonii H3 three-hour duckweed surface-colonization data are provided separately as a historical phenotype-transfer cohort, not root-specific training data. Supplementary release assets preserve raw ProtT5 mean features, separate evaluation/deployment model bundles and stored 340-configuration results. The approximately 78-GB five-encoder residue bank collection and pretrained encoder checkpoints are not included. CC BY 4.0 applies to original curation contributions and downstream project artifacts; upstream sequence and model terms remain applicable.",
+  "creators": [
+    {"name": "Yan, Shaocheng", "affiliation": "Beihang University"},
+    {"name": "Liu, Hong", "affiliation": "Beihang University"},
+    {"name": "Fu, Yuming", "affiliation": "Beihang University"}
+  ],
+  "version": "1.0.0",
+  "license": "cc-by-4.0",
+  "keywords": ["root colonization", "genetic perturbation", "protein sequences", "curated database", "BacRootFit"]
+}

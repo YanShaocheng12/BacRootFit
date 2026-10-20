@@ -1,0 +1,84 @@
+{
+  "status": "complete_verified",
+  "encoder": "esmc",
+  "proteins": 16383,
+  "dimension": 1152,
+  "total_residues": 5907097,
+  "storage": "bfloat16_bits",
+  "window": 1022,
+  "labels_used": false,
+  "mean_std_recomputed_consistently_from_same_native_residues": true,
+  "ddof": 0,
+  "lossy_quantization": false,
+  "checks": [
+    {
+      "row": 0,
+      "length": 211,
+      "singleton_vs_batch_mean_max_error": 0.0013859756290912628,
+      "lossless_storage_verified": true
+    },
+    {
+      "row": 247,
+      "length": 300,
+      "singleton_vs_batch_mean_max_error": 0.0,
+      "lossless_storage_verified": true
+    },
+    {
+      "row": 1008,
+      "length": 64,
+      "singleton_vs_batch_mean_max_error": 0.001739501953125,
+      "lossless_storage_verified": true
+    },
+    {
+      "row": 1462,
+      "length": 2378,
+      "singleton_vs_batch_mean_max_error": 0.00014637410640716553,
+      "lossless_storage_verified": true
+    },
+    {
+      "row": 6228,
+      "length": 1200,
+      "singleton_vs_batch_mean_max_error": 0.00019997358322143555,
+      "lossless_storage_verified": true
+    },
+    {
+      "row": 8191,
+      "length": 239,
+      "singleton_vs_batch_mean_max_error": 0.001415252685546875,
+      "lossless_storage_verified": true
+    },
+    {
+      "row": 10096,
+      "length": 4901,
+      "singleton_vs_batch_mean_max_error": 0.00015538930892944336,
+      "lossless_storage_verified": true
+    },
+    {
+      "row": 12764,
+      "length": 29,
+      "singleton_vs_batch_mean_max_error": 0.001774221658706665,
+      "lossless_storage_verified": true
+    },
+    {
+      "row": 14716,
+      "length": 1022,
+      "singleton_vs_batch_mean_max_error": 0.0,
+      "lossless_storage_verified": true
+    },
+    {
+      "row": 16382,
+      "length": 223,
+      "singleton_vs_batch_mean_max_error": 0.0009371638298034668,
+      "lossless_storage_verified": true
+    }
+  ],
+  "old_mean_recipe_checks": [],
+  "files": {
+    "residues.npy": "0f826390eba442496d394a3b519604d3b098db4029946322fb59a0fece78745c",
+    "mean.npy": "afece130f8103df2d73528acd081afacb7cdaee471e4235582a659cdee25a11a",
+    "std.npy": "9afbea417b0ed2d054b46d2c281a3532d552870e5ecce2fa6002ca63934fcc70",
+    "done.npy": "6aabfb0e3b7e3a772a3d4071bae9ae2f0b4033ab585b595c29cc6af0af3223a3"
+  },
+  "seconds": 470.5372335910797,
+  "code_sha256": "b60cbbede2240b8336d7bc4324a041eda7ddc8ed8e109155db847e639f100cf9"
+}

@@ -1,0 +1,20 @@
+{
+  "python": "3.10.22 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:15:38) [MSC v.1942 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "GPU": "NVIDIA GeForce RTX 5070",
+  "GPU_memory_bytes": 12820480000,
+  "CUDA": "13.0",
+  "packages": {
+    "torch": "2.13.0+cu130",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.7.2",
+    "transformers": "5.18.0",
+    "tokenizers": "0.23.2",
+    "sentencepiece": "not-installed",
+    "huggingface-hub": "1.33.0",
+    "safetensors": "0.8.0",
+    "joblib": "1.6.0",
+    "matplotlib": "3.10.9"
+  }
+}
