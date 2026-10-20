@@ -83,7 +83,7 @@ The development model achieved internal test ROC-AUC **0.8481**, AP **0.4519**, 
 
 ## Data, browsing and citation
 
-`website/dist/` provides a static browser with study/strain/label filters, protein/locus search, evidence details, matched FASTA/TSV downloads and local prediction instructions. Run `python -m http.server 8000 --directory website/dist` and open http://localhost:8000. GitHub Pages can serve the same directory using the supplied workflow after Pages is enabled for GitHub Actions.
+`website/dist/` provides a data-focused static browser with study/strain/label filters, protein/locus search, evidence details, matched FASTA/TSV downloads, and study-level curation rules. The website links here for models, analysis code and local prediction instructions. Run `python -m http.server 8000 --directory website/dist` and open http://localhost:8000. GitHub Pages serves the same directory using the supplied workflow.
 
 See `docs/DATA.md`, `docs/MODEL_CARD.md` and `docs/PUBLISHING.md`. Cite the manuscript title and authors listed in `CITATION.cff`; replace the provisional software citation with the version-specific Zenodo DOI once deposited. No DOI has been invented or reserved by this package.
 

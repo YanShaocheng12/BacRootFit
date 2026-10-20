@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="248" viewBox="0 0 420 248" role="img" aria-labelledby="title desc">
+<title id="title">Plant roots and associated bacteria</title><desc id="desc">A branching root system surrounded by rod-shaped bacterial cells; an illustration of the experimental subject of the collection.</desc>
+<defs><pattern id="soil" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="5" cy="7" r="1" fill="#d8dfcd"/></pattern></defs>
+<rect x="26" y="94" width="368" height="140" rx="24" fill="url(#soil)"/><path d="M43 94H377" stroke="#d1dbc5" stroke-dasharray="4 5"/>
+<g fill="#a7be7d" stroke="#6c8c53" stroke-width="1.5"><path d="M210 74C169 76 153 59 151 30c32-1 55 17 59 44Z"/><path d="M210 66c0-31 18-51 49-52-1 28-16 47-49 52Z"/></g>
+<g fill="none" stroke-linecap="round"><path d="M210 47v52" stroke="#416949" stroke-width="4"/><g stroke="#668754" stroke-width="3"><path d="M210 98c-4 29 3 52-8 78l-5 45M208 117c-18 11-29 29-39 46l-15 21M207 143c19 10 26 25 40 34l16 18M201 181c-13 4-22 14-26 28M212 106c18 2 31 9 44 22"/></g><g stroke="#92a97b" stroke-width="1.7"><path d="m186 140-20-5m7 23-22 3m6 19-5 17m77-39 18-2m-5 18 4 17m-45 12 10 12m-21-20-17-1m77-71 16-6m-21 2 3 14"/></g></g>
+<g fill="#d6e7b3" stroke="#406c4c" stroke-width="1.8">
+<rect x="141" y="119" width="24" height="10" rx="5" transform="rotate(-24 153 124)"/><rect x="181" y="150" width="22" height="10" rx="5" transform="rotate(67 192 155)"/>
+<rect x="228" y="114" width="24" height="10" rx="5" transform="rotate(28 240 119)"/><rect x="251" y="148" width="24" height="10" rx="5" transform="rotate(-36 263 153)"/>
+<rect x="211" y="192" width="23" height="10" rx="5" transform="rotate(56 222 197)"/><rect x="125" y="184" width="24" height="10" rx="5" transform="rotate(-18 137 189)"/>
+<rect x="275" y="198" width="24" height="10" rx="5" transform="rotate(25 287 203)"/>
+</g><g fill="#6b8d53"><circle cx="153" cy="124" r="1.5"/><circle cx="192" cy="155" r="1.5"/><circle cx="240" cy="119" r="1.5"/><circle cx="263" cy="153" r="1.5"/><circle cx="222" cy="197" r="1.5"/><circle cx="137" cy="189" r="1.5"/><circle cx="287" cy="203" r="1.5"/></g>
+</svg>
