@@ -97,6 +97,22 @@ async function start() {
   } catch(error) {$('count').textContent=`Unable to load data. Serve this directory with HTTP, then reload. ${error.message}`;$('rows').innerHTML='<tr><td colspan="6">Database unavailable. The versioned data package remains available in Downloads.</td></tr>';}
   try {
     const release=await json('data/release.json');
+    // Availability is positively discovered at runtime; a local preparation
+    // manifest never pretends that a GitHub release or DOI already exists.
+    if(!release.repository_available){
+      try {
+        const repository=release.repository_url.replace('https://github.com/','');
+        const response=await fetch(`https://api.github.com/repos/${repository}/releases/tags/v${release.version}`,{signal:AbortSignal.timeout(5000)});
+        if(response.ok){
+          const published=await response.json();
+          for(const asset of release.assets){
+            const found=published.assets.find(r=>r.name===asset.filename && r.size===asset.bytes && r.digest===`sha256:${asset.sha256}`);
+            if(found) asset.download_url=found.browser_download_url;
+          }
+          release.repository_available=true;
+        }
+      } catch { /* Offline use retains local database and sequence downloads. */ }
+    }
     if(release.repository_available){$('repository-link').href=release.repository_url;$('repository-link').textContent='GitHub ↗';$('repository-link').removeAttribute('aria-disabled');}
     for(const anchor of document.querySelectorAll('.remote-asset')){
       const asset=release.assets.find(x=>x.kind===anchor.dataset.kind);

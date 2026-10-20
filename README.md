@@ -22,7 +22,7 @@ bacrootfit assets --from-dir ../assets
 bacrootfit verify --out verification.json
 ```
 
-The asset installer verifies SHA-256 and refuses to replace locally changed files. Public URLs remain unset until a release is actually published; the local command already works. `release_manifest.json` records all archive hashes and canonical-file identities.
+The asset installer verifies SHA-256 and refuses to replace locally changed files. After the GitHub release is public, `bacrootfit assets` discovers its versioned download URLs from the GitHub API and verifies each download against the frozen manifest; `--from-dir` also works offline. `release_manifest.json` records all archive hashes and canonical-file identities without claiming an unpublished deposit already exists.
 
 ## Predict from a checked feature example
 

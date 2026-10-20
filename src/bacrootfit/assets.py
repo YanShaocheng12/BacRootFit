@@ -8,6 +8,23 @@ from zipfile import ZipFile
 from .io import sha256
 
 
+def published_url(manifest, asset):
+    repository = manifest["repository"].removeprefix("https://github.com/").strip("/")
+    endpoint = f"https://api.github.com/repos/{repository}/releases/tags/v{manifest['version']}"
+    request = urllib.request.Request(endpoint, headers={"User-Agent": "BacRootFit/1.0.0"})
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            release = json.load(response)
+    except Exception as exc:
+        raise ValueError("The public release is not accessible yet. Use --from-dir with the prepared assets folder.") from exc
+    record = next((r for r in release["assets"] if r["name"] == asset["filename"]), None)
+    if record is None or record["size"] != asset["bytes"]:
+        raise ValueError("The published asset is missing or has a different size")
+    if record.get("digest") and record["digest"] != "sha256:" + asset["sha256"]:
+        raise ValueError("The published asset's server digest differs from the release lock")
+    return record["browser_download_url"]
+
+
 def unpack_checked(archive, root):
     root = Path(root).resolve()
     with ZipFile(archive) as bundle:
@@ -43,11 +60,10 @@ def main(argv=None):
                 raise ValueError(f"Asset checksum mismatch: {path.name}")
             unpack_checked(path, args.root)
         else:
-            if not asset.get("download_url"):
-                raise ValueError("No public URL has been published. Supply --from-dir with the prepared assets folder.")
+            url = asset.get("download_url") or published_url(manifest, asset)
             with tempfile.TemporaryDirectory() as temporary:
                 path = Path(temporary) / asset["filename"]
-                urllib.request.urlretrieve(asset["download_url"], path)
+                urllib.request.urlretrieve(url, path)
                 if sha256(path) != asset["sha256"]:
                     raise ValueError("Downloaded asset checksum mismatch")
                 unpack_checked(path, args.root)
