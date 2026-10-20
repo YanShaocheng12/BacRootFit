@@ -1,1 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title"><title id="title">Plant roots with attached rod-shaped bacteria</title><rect width="64" height="64" rx="17" fill="#174d39"/><g fill="#d8edb5"><path d="M31 21C21 22 16 17 15 9c10 0 15 4 16 12Z"/><path d="M32 25c0-11 6-17 16-18 0 10-6 17-16 18Z"/></g><g fill="none" stroke="#d8edb5" stroke-width="2.2" stroke-linecap="round"><path d="M32 17v17c0 7-3 12-2 22M32 34l-10 9-3 6m12-7 10 8m-9-20 10 7"/></g><g fill="#b8d98b" stroke="#dff0c1" stroke-width="1"><rect x="10" y="31" width="12" height="5.5" rx="2.75" transform="rotate(-28 16 34)"/><rect x="44" y="30" width="11" height="5.5" rx="2.75" transform="rotate(38 49 33)"/><rect x="40" y="51" width="12" height="5.5" rx="2.75" transform="rotate(-25 46 54)"/><rect x="10" y="51" width="11" height="5.5" rx="2.75" transform="rotate(30 15 54)"/></g><g fill="#527247"><circle cx="16" cy="34" r=".9"/><circle cx="49" cy="33" r=".9"/><circle cx="46" cy="54" r=".9"/><circle cx="15" cy="54" r=".9"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+<title id="title">BacRootFit: plant roots and associated rod-shaped bacteria</title>
+<desc id="desc">A botanical root system with four rod-shaped bacterial cells, drawn as a scientific resource emblem.</desc>
+<rect width="128" height="128" rx="27" fill="#153f35"/>
+<rect x="7.5" y="7.5" width="113" height="113" rx="21" fill="none" stroke="#8eaa8c" stroke-opacity=".36"/>
+<g fill="#d5e7ba"><path d="M64 43C48 45 36 36 34 20c17 0 29 8 30 23Z"/><path d="M64 36C64 19 76 11 93 12c-2 16-12 26-29 24Z"/></g>
+<g fill="none" stroke="#7da078" stroke-width="1.2" stroke-linecap="round"><path d="M43 27c8 5 14 10 21 16M65 35l20-16"/></g>
+<g fill="none" stroke="#edf3de" stroke-linecap="round" stroke-linejoin="round">
+<path d="M64 34c0 17-3 26 1 41s-6 22-4 35" stroke-width="2.8"/>
+<path d="M64 58c-10 5-15 13-20 22s-10 11-14 19M65 72c13 3 16 14 26 18M62 90c-10 2-16 8-20 17M65 51c8 2 15 7 20 14" stroke-width="2"/>
+<path d="m51 70-10-2m3 12-11 1m3 10-1 12m42-21 11-1m-3 7 2 12m-36 1-10-1m21-1 8 8m8-47 3 10" stroke-width="1.25" stroke-opacity=".8"/>
+</g>
+<g fill="#b3ce8c" stroke="#edf3de" stroke-width="1.35">
+<g transform="rotate(-27 33 56)"><rect x="22" y="51" width="22" height="10" rx="5"/><path d="M28 56h9" fill="none" stroke="#587954" stroke-width="1.1" stroke-linecap="round"/></g>
+<g transform="rotate(28 94 67)"><rect x="83" y="62" width="22" height="10" rx="5"/><path d="M89 67h9" fill="none" stroke="#587954" stroke-width="1.1" stroke-linecap="round"/></g>
+<g transform="rotate(-33 24 88)"><rect x="14" y="83" width="20" height="10" rx="5"/><path d="M20 88h8" fill="none" stroke="#587954" stroke-width="1.1" stroke-linecap="round"/></g>
+<g transform="rotate(24 95 106)"><rect x="84" y="101" width="22" height="10" rx="5"/><path d="M90 106h9" fill="none" stroke="#587954" stroke-width="1.1" stroke-linecap="round"/></g>
+</g></svg>
