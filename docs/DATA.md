@@ -1,12 +1,12 @@
 # Database and evidence
 
-The manuscript data lock is v0.12 with V27 repaired groups and partitions. It contains 14,505 unique complete proteins (1,036 label 1, 13,469 label 0), 21 contributing studies and 7,799 repaired homology groups. Study counts are source memberships; one sequence may link to more than one source. Use `studies_included.tsv` or active catalogue entries when counting the 21 studies; `study_catalog.tsv` also contains archived noncontributing sources.
+Release v1.0.0 contains 14,505 unique complete proteins (1,036 label 1, 13,469 label 0), 21 contributing studies and 7,799 homology groups. Study counts are source memberships; one sequence may link to more than one source. Use `studies_included.tsv` or active catalogue entries when counting the 21 studies; `study_catalog.tsv` also contains archived noncontributing sources.
 
 ## Files
 
 | Path after installing the data asset | Meaning |
 | --- | --- |
-| `data/samples.tsv`, `data/proteins.faa` | Formal training proteins, labels, repaired groups and sequence hashes |
+| `data/samples.tsv`, `data/proteins.faa` | Formal training proteins, labels, homology groups and sequence hashes |
 | `data/measurements_qualified.tsv` | Qualified source observations linked to formal proteins |
 | `data/measurements_all_linked.tsv` | Broader linked observations; not all are training-eligible |
 | `data/training_qualification.tsv`, `data/evidence_quality.tsv` | Qualification decisions and evidence limitations |

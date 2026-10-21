@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "unit_tests": 8,
+  "paper_intervals": {
+    "status": "PASS",
+    "fixed_predictions": true,
+    "refitting": false,
+    "checks": [
+      {
+        "cohort": "internal_full",
+        "n": 2841,
+        "groups": 1557,
+        "bootstrap": 5000,
+        "max_interval_error": 0.0,
+        "paper_interval_comparison": true
+      },
+      {
+        "cohort": "H3_full",
+        "n": 1878,
+        "groups": 1430,
+        "bootstrap": 5000,
+        "max_interval_error": 0.0,
+        "paper_interval_comparison": true
+      }
+    ]
+  },
+  "native_encoder_smoke_tests": [
+    {
+      "encoder": "prott5",
+      "proteins": 3,
+      "maximum_length": 4538,
+      "maximum_absolute_errors": {
+        "mean.npy": 8.308514952659607e-05,
+        "std.npy": 7.699429988861084e-05
+      }
+    },
+    {
+      "encoder": "ankh",
+      "proteins": 3,
+      "maximum_length": 4538,
+      "maximum_absolute_errors": {
+        "mean.npy": 0.0007325336337089539,
+        "std.npy": 0.0008344054222106934
+      }
+    },
+    {
+      "encoder": "protbert",
+      "proteins": 3,
+      "maximum_length": 4538,
+      "maximum_absolute_errors": {
+        "mean.npy": 0.0023603439331054688,
+        "std.npy": 0.0007933378219604492
+      }
+    },
+    {
+      "encoder": "esm",
+      "proteins": 3,
+      "maximum_length": 4538,
+      "maximum_absolute_errors": {
+        "mean.npy": 0.0,
+        "std.npy": 0.0
+      }
+    },
+    {
+      "encoder": "esmc",
+      "proteins": 3,
+      "maximum_length": 4538,
+      "maximum_absolute_errors": {
+        "mean.npy": 0.0,
+        "std.npy": 0.0
+      }
+    }
+  ],
+  "full_340_search_rerun": false,
+  "protected_paper_artifacts_unchanged": 10
+}

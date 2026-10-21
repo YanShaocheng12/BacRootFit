@@ -1,32 +1,53 @@
 # Reproducibility scope
 
-## Included in the release
+## Included materials
 
-1. Formal FASTA, labels, source observation tables, mapping/evidence records and repaired group assignments.
-2. Original development/test/fivefold/monitor IDs and full-database deployment folds.
-3. All 340 configuration definitions and stored development rankings, representative test predictions, OOF records, baselines, uncertainty, split sensitivity and LOSO summaries.
+1. Formal FASTA, labels, qualified source observations, sequence mappings, evidence rules and homology groups.
+2. Fixed development/internal-test, fivefold validation and neural-monitor partitions; full-data deployment folds.
+3. All 340 candidate definitions, development rankings, OOF predictions, representative tests, baselines, intervals, split-sensitivity and LOSO summaries.
 4. Separate unmodified development and deployment SVM/scaler bundles.
-5. The 16,383-row raw ProtT5 mean bank (14,505 formal proteins followed by 1,878 H3 rows), with sequence-checked feature index.
-6. Public inference, feature extraction, training, evaluation and verification entry points, plus the original V27 numerical fit routines and original archival scripts.
+5. The 16,383-row raw ProtT5 mean bank: 14,505 formal proteins followed by 1,878 H3 rows, with sequence-checked index.
+6. Public prediction, extraction, training, evaluation and verification commands; archived numerical routines and workflow sources.
+7. `config/H3_full_groups.tsv` and `config/internal_full_groups.tsv` for the paper's uncertainty analysis, plus H3 grouping policy and checkpoint file locks.
 
-`config/plan.json` uses formal-database row coordinates for development/internal-test IDs and **cohort-local** row coordinates for `H3_full`/`H3_balanced`. In the combined feature bank, H3 rows start at 14,505; add that offset only when indexing the combined array. Join labels and predictions by ID and sequence hash rather than assuming every plan field uses global feature-row coordinates. H3 labels do not include homology groups; supply a verified group table via `evaluate --groups` for new group-bootstrap runs, or use the archived paper confidence intervals.
+The first six items are in the v1.0.0 assets/source release; item 7 and the additional maintenance helpers are provided in the current Git checkout. The original archives are preserved.
 
-The trained SVM recipe uses four of the five fold partitions as the actual training pool, with no neural early-stopping monitor. Neural candidates use the saved actual-training/monitor division inside that pool. Preprocessing and class weights are derived from the actual training rows for that fit. OOF threshold selection concatenates all development validation predictions; it does not average fold-wise thresholds or study-wise MCC.
+## Execution levels
 
-The threshold search enumerates score boundaries, includes all-negative and all-positive points, assigns MCC=0 to zero denominators and chooses the highest threshold on an exact MCC tie. Configuration ranking uses pooled OOF MCC, then AUC, AP and original registry order. Neural refits use the ceiling of median best epoch across folds. Tests never select a configuration or threshold.
+| Analysis | Executable entry point | Extra requirements |
+| --- | --- | --- |
+| Cached-feature inference | `bacrootfit predict --features ...` | Installed model asset; CPU supported |
+| New FASTA → ProtT5 → prediction | `bacrootfit predict --encoder-dir ...` | Pinned encoder; CUDA FP16 environment |
+| Selected model's fivefold OOF and refit | `bacrootfit train --root . --out ...` | Included ProtT5 mean bank and fixed partitions |
+| All 340 configurations | `bacrootfit train --all-configurations --features-dir ... --out ...` | All five mean/std/residue banks, CUDA and neural dependencies |
+| Paper group-bootstrap intervals | `python scripts/reproduce_paper_intervals.py ...` | Archived fixed predictions and supplied cohort groups |
 
-## Portability changes
+The complete five-encoder banks occupy approximately 78 GB and are separate from the lightweight release. [FEATURE_BANKS.md](FEATURE_BANKS.md) gives one concrete generation command per encoder and the required dependencies. That generation is distinct from both refitting a classifier and auditing stored results.
 
-`src/bacrootfit/research_engine/fit26.py` and `neural26.py` preserve the numerical V27 source. Only the location bindings in `common26.py` are adapted to explicit environment inputs; the command wrapper supplies those inputs, installs the frozen split/configuration files and writes new outputs separately. The new orchestration is sequential to avoid hardware-specific scheduling assumptions. `provenance/public_adaptations.json` records original file hashes.
+## Data coordinates and fitting rules
 
-The public predictor changes the original `main` signature solely to accept CLI argument routing. The original inference source is retained for comparison. Encoder numerical settings, raw-mean identity checking, normalization, stored scaler and fixed threshold are preserved.
+`config/plan.json` uses formal-database row coordinates for development/internal-test IDs and **cohort-local** coordinates for `H3_full`/`H3_balanced`. The combined feature bank starts H3 at row 14,505. Use ID and sequence-hash joins when selecting rows.
 
-## Full comparison prerequisites
+The SVM uses each fold's four-fold training pool. Neural candidates additionally use the saved training/monitor split for early stopping. Preprocessing and class weights come from the actual training rows for that fit. Pooled OOF threshold selection enumerates score boundaries, includes all-positive/all-negative points, assigns zero MCC to zero denominators and selects the higher threshold on an exact tie. Candidate ranking uses OOF MCC, then AUC, AP and registry order. Neural refit epochs are the ceiling of median best fold epoch. Test and H3 results do not select a configuration or threshold.
 
-The main download provides raw ProtT5 means for the selected model. It does not contain all five large pretrained encoders or approximately 78 GB of native residue/mean/std arrays. The complete 340-configuration search requires those five arrays reconstructed to the recorded recipes or distributed as separate large data assets. `config/feature_banks/` lists exact original array hashes, dimensions, native precision and mean/std recipes; `research_archive/original_v27/` and `research_archive/original_workspace/` preserve the original full workflow and its upstream source dependencies. The results asset also includes `results/graph/parent_scaffold_NOT_TRAINING.faa` for the historical bridge-aware homology scaffold. Those parent sequences are not extra labelled training proteins. Do not claim that installing the small package alone reproduces the entire 1,700-fit experiment from fresh FASTA.
+## Complete-cohort evaluation and uncertainty
 
-`bacrootfit train --all-configurations --features-dir ... --dry-run` checks required array hashes, partitions and the 1,700-fit plan before fitting. The package currently extracts the final ProtT5 mean recipe; other encoder/residue-bank regeneration still relies on the archived research implementation and its documented upstream dependencies. Fixed published partitions are distributed instead of rerunning an approximate similarity search to silently create new splits.
+By default, `bacrootfit evaluate` requires exactly the label-table IDs. Use `--cohort-ids config/internal_full_groups.tsv` to define the internal test within the larger formal label table. Missing predictions fail before metrics are saved. `--allow-subset` explicitly permits partial analysis; the output includes completeness, expected/matched/missing counts, missing IDs and class counts. Extra, duplicate, inconsistent-threshold and sequence-mismatched predictions fail.
 
-## Validation records
+H3 groups contain 1,878 IDs in 1,430 components. They inherit historical H3 extension components and union connected repaired parent components by sequence SHA-256, without splitting inherited components. They are used only for uncertainty, not to train or select the model. `config/H3_group_policy.json` records original source hashes and the grouping rule. Internal test has 2,841 IDs in 1,557 groups.
 
-The local publication handoff contains `validation/` with executed verification, CPU cached-feature inference, isolated FASTA-to-score checks where available, a rerun of the selected development configuration and tests. The final handoff report states which checks actually passed. None of these packaging checks reranks all 340 candidates or changes the released paper model/data.
+The paper used 5,000 accepted equal-probability multinomial draws over sorted groups, seed 20261016, at fixed predictions and thresholds, with percentile 2.5/97.5 bounds. Single-class draws are rejected. The public evaluator implements the same draw and tied-score metric rules. The helper below converts archived `sample_id` prediction headers to the public `protein_id` schema, checks complete membership and compares all nine reported metric intervals with the archived table:
+
+```bash
+python scripts/reproduce_paper_intervals.py --root . --out runs/paper_intervals --bootstrap 5000
+```
+
+This recomputes uncertainty from stored predictions. It is not a new model fit, newly independent validation, or between-study uncertainty estimate. Paired baseline differences remain archived in `results/uncertainty/paired_differences.tsv`; the single-predictor evaluation command does not recompute that paired analysis.
+
+## Numerical portability and validation
+
+The V27 numerical `fit26.py` and `neural26.py` are preserved. `common26.py` adapts path bindings; the wrapper supplies explicit inputs and writes new outputs separately. `provenance/public_adaptations.json` records source identities. Published partitions are distributed directly rather than silently regenerated by a different approximate homology search.
+
+The publication checks reran the selected development and deployment recipes (five folds plus one refit each). Development OOF/internal scores differed from the originals by at most 4.44×10⁻¹⁶; the deployment threshold was identical. Cached-feature inference reproduced internal and H3 metrics. FASTA-to-score execution was checked on three existing database proteins, including a 4,538-residue example split into five windows; maximum raw-mean difference from the original FP16 cache was 6.10×10⁻⁵. These examples test execution, not biological generalization.
+
+Tests cover threshold boundaries, input identities, checked installation and complete/subset evaluation. New bank generation follows the archived checkpoint/tokenization/precision/batching/storage recipe; `complete.json` reports comparisons with historical bank hashes. Different hardware, kernels or batching can change floating-point values. A full 340-configuration run from newly regenerated banks has not been repeated for this maintenance revision.

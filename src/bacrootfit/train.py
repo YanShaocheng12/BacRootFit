@@ -68,9 +68,18 @@ def main(argv=None):
             required.add("residues.npy")
         requirements[enc] = sorted(required)
         metadata = json.loads((features / enc / "complete.json").read_text(encoding="utf8"))
+        dimension = {"prott5": 1024, "ankh": 768, "esm": 1280, "protbert": 1024, "esmc": 1152}[enc]
+        if metadata.get("smoke_test") or metadata.get("status") != "complete_verified" or metadata.get("proteins") != len(index) or metadata.get("dimension") != dimension:
+            raise ValueError(f"Feature bank is incomplete or has the wrong dimensions: {enc}")
+        if metadata.get("feature_index_sha256") and metadata["feature_index_sha256"] != sha256(root / "config/feature_index.tsv"):
+            raise ValueError(f"Feature bank uses a different index: {enc}")
         for name in required:
             if sha256(features / enc / name) != metadata["files"][name]:
                 raise ValueError(f"Feature-bank checksum mismatch: {enc}/{name}")
+            array = np.load(features / enc / name, mmap_mode="r")
+            expected_rows = sum(int(r["length"]) for r in index) if name == "residues.npy" else len(index)
+            if array.shape != (expected_rows, dimension):
+                raise ValueError(f"Feature-bank array dimensions differ: {enc}/{name}")
     summary = dict(role=args.role, configurations=len(configs), folds=len(folds),
                    CV_fits=len(configs)*len(folds), selected_refits=1,
                    training_proteins=len(train_ids), features=requirements,

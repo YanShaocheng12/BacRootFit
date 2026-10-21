@@ -1,25 +1,31 @@
-# GitHub, website and Zenodo release
+# Release access and maintenance
 
-Target repository: **YanShaocheng12/BacRootFit**, version **v1.0.0**.
+## Public distribution
 
-The researcher authorized MIT for code and CC BY 4.0 for original curation data. Repository creation and upload need an authenticated connection to that GitHub account. Do not put access tokens into scripts, Git remotes or this repository.
+- Database browser: https://yanshaocheng12.github.io/BacRootFit/
+- Source code: https://github.com/YanShaocheng12/BacRootFit
+- Paper data and model release: https://github.com/YanShaocheng12/BacRootFit/releases/tag/v1.0.0
 
-## GitHub
+The release provides separate data, models, ProtT5 mean features and results ZIPs. Install them with `bacrootfit assets`, or download them manually and use `bacrootfit assets --from-dir /path/to/archives`. SHA-256 values and direct URLs are in `release_manifest.json`.
 
-The local publication handoff has `repository/`, `assets/`, validation receipts and ZIP files. Upload only the repository tree as Git source; attach the four separately checksummed assets to a release. The ignored large data/model/feature working directories are installed from those assets. `scripts/publish_github.ps1` validates the authenticated account and repository state, then creates the repository if needed, pushes `main` and creates a **draft** v1.0.0 release with the prepared assets. It refuses to overwrite an existing release. Check the concrete release before publishing it. The script does not create a Zenodo DOI.
+The release's original ZIPs preserve the paper data and model identities. The `main` branch carries subsequent documentation and evaluation-interface fixes; use its current checkout for complete-cohort checking, the supplied H3 bootstrap groups and the new reproduction helpers. These additions do not change paper model weights, sequences, labels or fixed predictions.
 
-Use `scripts/configure_downloads.py --repository https://github.com/YanShaocheng12/BacRootFit --tag v1.0.0` only after confirming the public release assets exist. It verifies each remote asset against the expected SHA-256 before recording downloadable URLs. Before that, local asset installation remains available via `--from-dir`.
+## Website and code
 
-GitHub blocks regular Git files above 100 MiB and recommends keeping repositories small. Release assets are appropriate for model and feature archives: https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github
+The GitHub Pages workflow publishes `website/dist/`. The browser presents experimental labels and source evidence; the repository provides local prediction and reproduction instructions. Evidence pages display a source publication plus recorded supplement/worksheet/row or article figure/table details. Original archive paths remain in downloadable audit records.
 
-## Website
+Installation, executable examples and the distinction between selected-model reproduction and full comparison are in the [README](../README.md), [reproducibility scope](REPRODUCIBILITY.md) and [feature-bank guide](FEATURE_BANKS.md).
 
-The static `website/dist/` browser can run locally and is ready for GitHub Pages. In repository Settings → Pages, choose GitHub Actions as the build source, then run the `pages` workflow. It uploads only the static directory. It serves real database records with source evidence and supports matched metadata/FASTA download. The large model and feature downloads point to the public release only after availability is verified. Online ProtT5 prediction is not implemented; users run the checked local predictor.
+## Maintenance procedure
 
-The bundled database download is versioned and checksum-listed. Experimental labels and model output are clearly named. Do not reinterpret H3 as root-specific colonization or the deployment model's training-set predictions as a new held-out test.
+Maintainers should preserve the paper archive hashes. For a changed data or model artifact, issue a new version rather than silently replacing a paper archive. Documentation-only and interface changes can be tracked separately on `main`.
 
-## Zenodo
+`scripts/configure_downloads.py` checks public asset identities and synchronizes the repository manifest and both website metadata files. It can verify downloaded content, or use a saved GitHub release API response with `--release-metadata` to verify GitHub's server-side SHA-256 and file sizes. Actual asset installation always verifies downloaded bytes.
 
-Create the data record and link it to the code release, or enable Zenodo's GitHub integration before publishing the selected release. GitHub's official instructions are https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content . Zenodo can archive public GitHub releases; a GitHub-only archive does not automatically include separately installed local feature banks.
+To update the site, commit the validated static sources, push `main` and run the `pages` GitHub Actions workflow. Automated checks run independently on pushes. `scripts/publish_github.ps1` remains a maintainer bootstrap utility for first-time releases; it is not required by users.
 
-Deposit the four asset ZIPs plus the code snapshot, `release_manifest.json`, checksums and the exact paper version metadata. The handoff also supplies a ready-to-upload combined archive. Use `.zenodo.json` for software metadata and `zenodo/data_metadata.json` for data; review the record title, author names, affiliations and license scope. No unissued DOI is present. After DOI minting, add the **version-specific** DOI to `CITATION.cff`, the README, website and manuscript availability statement, retaining the relation to any concept DOI and separate data/code records.
+## Citation and archival metadata
+
+The current resource can be cited by repository URL and version. `CITATION.cff`, `.zenodo.json` and `zenodo/data_metadata.json` contain citation and archival metadata. A future archival deposit should include the versioned assets and matching source snapshot; add the issued version-specific DOI consistently to those records and the website. An archive of Git source alone does not include separately downloaded feature banks.
+
+Code is MIT; original curation contributions are CC BY 4.0. Third-party material retains upstream terms.

@@ -58,6 +58,10 @@ def main(argv=None):
             if sha256(root / relative) != expected:
                 raise ValueError(f"Canonical file checksum differs: {relative}")
             checked += 1
+    supplements = manifest.get("supplementary_files", {})
+    for relative, expected in supplements.items():
+        if not (root / relative).is_file() or sha256(root / relative) != expected:
+            raise ValueError(f"Supplementary file checksum differs: {relative}")
     for role in ["development", "deployment"]:
         folder = root / "models" / role
         if not folder.exists():
@@ -70,6 +74,7 @@ def main(argv=None):
     record = dict(status="PASS", proteins=len(rows), positive=1036, controls=13469,
                   groups=len(set(group)), development=len(plan["development"]), internal_test=len(plan["internal_test"]),
                   folds=5, group_crossovers=0, canonical_files_verified=checked,
+                  supplementary_files_verified=len(supplements),
                   scope="Identity/group integrity; not an exhaustive new sequence-similarity search")
     if args.out:
         save_json(args.out, record)

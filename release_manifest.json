@@ -2,7 +2,7 @@
   "resource": "BacRootFit",
   "version": "1.0.0",
   "prepared_date": "2026-10-21",
-  "publication_state": "prepared_locally",
+  "publication_state": "published_assets_verified",
   "repository": "https://github.com/YanShaocheng12/BacRootFit",
   "code_license": "MIT",
   "curation_license": "CC-BY-4.0",
@@ -18,7 +18,7 @@
       "bytes": 22644688,
       "sha256": "c98dff60fea4d8227a71e0708d7e26e27b26788b2a60990ef10a9af0fe539ce5",
       "files": 58,
-      "download_url": null
+      "download_url": "https://github.com/YanShaocheng12/BacRootFit/releases/download/v1.0.0/BacRootFit-data-v1.0.0.zip"
     },
     {
       "kind": "models",
@@ -26,7 +26,7 @@
       "bytes": 49960589,
       "sha256": "330053a41e11431e2d86f2f9c590ab664a4b13711d71332f3d8fab48451186fe",
       "files": 14,
-      "download_url": null
+      "download_url": "https://github.com/YanShaocheng12/BacRootFit/releases/download/v1.0.0/BacRootFit-models-v1.0.0.zip"
     },
     {
       "kind": "features",
@@ -34,7 +34,7 @@
       "bytes": 62364170,
       "sha256": "88437bf8c0482864f1c0dd096118ec3c7ea700f0da7b1504f34e3ef155bb624a",
       "files": 6,
-      "download_url": null
+      "download_url": "https://github.com/YanShaocheng12/BacRootFit/releases/download/v1.0.0/BacRootFit-features-v1.0.0.zip"
     },
     {
       "kind": "results",
@@ -42,7 +42,7 @@
       "bytes": 58759973,
       "sha256": "38a5e7214a9f3e4a53335e9f9622d97b32d5195e4ff4a04ecbd8cf660dee8cf5",
       "files": 1354,
-      "download_url": null
+      "download_url": "https://github.com/YanShaocheng12/BacRootFit/releases/download/v1.0.0/BacRootFit-results-v1.0.0.zip"
     }
   ],
   "canonical_files": {
@@ -104,5 +104,16 @@
     "models/development/model.joblib": "b174b0b88a0427e0bbd6d6bd108b5a67607098568768e86b38ed11563af0adda",
     "models/development/scaler.joblib": "0f2401058763669ead25443fda19ff4aaa299ab16c5c188ddd1b289be7a84ff0"
   },
-  "full_five_encoder_residue_banks_included": false
+  "full_five_encoder_residue_banks_included": false,
+  "repository_available": true,
+  "release_url": "https://github.com/YanShaocheng12/BacRootFit/releases/tag/v1.0.0",
+  "asset_verification": "github_server_sha256_and_size",
+  "supplementary_files": {
+    "config/H3_full_groups.tsv": "b15c20b29325956ef05e5799d2b8dd9d84c63dfb4816d437cfa8526a5b1d9bc1",
+    "config/internal_full_groups.tsv": "4047479f3cf2233da685293507c1a36d14012be44dca6f275abe598923caf03c",
+    "config/H3_group_policy.json": "cca9512a846f2d5ac2399f52d3096d142eea6f422544c43ed195e2b01f8f2fd0",
+    "config/encoder_checkpoints.json": "f51b4116534784ef7ab5a4957d4a4217c17f95eb5db5b8dacf80b61c0a595417"
+  },
+  "metadata_updated": "2026-10-21",
+  "maintenance_source": "https://github.com/YanShaocheng12/BacRootFit/tree/main"
 }

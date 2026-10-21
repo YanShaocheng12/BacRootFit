@@ -13,6 +13,7 @@ results/
 research_archive/
 resources/
 runs/
+full_banks/
 *.joblib
 *.pt
 *.bin

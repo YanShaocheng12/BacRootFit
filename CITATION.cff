@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "Please cite the BacRootFit manuscript and the version-specific data/software DOI once available."
+message: "Please cite the BacRootFit manuscript and this versioned data/software resource."
 type: software
 title: "BacRootFit: predicting bacterial root colonization-associated genes using protein language models"
 version: 1.0.0

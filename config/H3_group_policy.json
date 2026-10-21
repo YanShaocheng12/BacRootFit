@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "historical_groups_sha256": "342793cd1551d98c547850f86f234b61e93e3daee7aa9357862b156f9c0af93e",
+  "repaired_parent_groups_sha256": "4d444e8d7221f45dea47d1caaa67e4da431b50490469662bce1c1d3a88f02346",
+  "rule": "union inherited H3-extension components with repaired parent components by sequence SHA; no splitting inherited components",
+  "used_for_training_splits": false,
+  "H3_search_not_recomputed": true
+}
