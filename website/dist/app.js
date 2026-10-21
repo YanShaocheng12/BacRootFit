@@ -5,6 +5,7 @@ const number = n => n.toLocaleString('en-US');
 let records = [], filtered = [], catalogue = {}, rules = {}, display = {labels:{},studies:{}}, page = 0, sequencesPromise;
 const perPage = 50;
 const shardCache = new Map();
+const sequenceShardCache = new Map();
 const split = text => String(text || '').split(';').map(x => x.trim()).filter(Boolean);
 const readable = value => split(value).map(v => display.labels[v] || v.replace(/_/g, ' ')).join(' ');
 const studyName = study => display.studies[study] || study.replace(/_/g, ' ');
@@ -36,6 +37,41 @@ async function sequences() {
   }).catch(error => {sequencesPromise = undefined; throw error;});
   return sequencesPromise;
 }
+async function proteinSequence(row) {
+  const shard = row.sha.slice(0, 2);
+  if (!sequenceShardCache.has(shard)) {
+    const promise = (async () => {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 15000);
+      try {
+        const response = await fetch(`data/sequences/${shard}.json`, {signal:controller.signal});
+        if (!response.ok) throw new Error(`Sequence request: HTTP ${response.status}`);
+        return await response.json();
+      } finally { clearTimeout(timeout); }
+    })();
+    sequenceShardCache.set(shard, promise);
+    promise.catch(() => {if (sequenceShardCache.get(shard) === promise) sequenceShardCache.delete(shard);});
+  }
+  const values = await sequenceShardCache.get(shard);
+  if (!values || typeof values !== 'object' || Array.isArray(values)) {
+    sequenceShardCache.delete(shard);
+    throw new Error('Invalid sequence response');
+  }
+  const sequence = values[row.id];
+  if (typeof sequence !== 'string' || sequence.length !== row.length || !/^[ACDEFGHIKLMNPQRSTVWY]+$/.test(sequence)) {
+    sequenceShardCache.delete(shard);
+    throw new Error('Sequence record unavailable or incomplete');
+  }
+  if (globalThis.crypto?.subtle) {
+    const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(sequence));
+    const actual = Array.from(new Uint8Array(digest), b => b.toString(16).padStart(2, '0')).join('');
+    if (actual !== row.sha) {
+      sequenceShardCache.delete(shard);
+      throw new Error('Sequence identity check failed');
+    }
+  }
+  return sequence;
+}
 function applyFilters() {
   const query = $('search').value.trim().toLowerCase(), study = $('study').value, strain = $('strain').value, label = $('label').value;
   filtered = records.filter(row => (!query || row.search.includes(query)) && (!study || split(row.studies).includes(study)) && (!strain || split(row.strain).includes(strain)) && (!label || String(row.label) === label));
@@ -64,10 +100,37 @@ async function detail(identifier) {
   const request = ++detailRequest;
   const row = records.find(x => x.id === identifier); if (!row) return;
   const dialog = $('detail');
-  $('detail-content').innerHTML = `<p class="detail-kicker">EXPERIMENTAL EVIDENCE</p><h2>${esc(nativeLocus(row))}</h2><p class="muted">Database ID: ${esc(row.id)}</p><p><span class="badge ${row.label ? 'positive' : ''}">${row.label ? 'Positive · 1' : 'Small-effect control · 0'}</span></p><div class="detail-grid"><div><b>Native strain</b>${esc(row.strain)}</div><div><b>Gene / native locus</b>${esc(row.genes)}</div><div><b>Complete protein</b>${number(row.length)} amino acids</div><div><b>Homology group</b>${esc(row.group)}</div><div><b>SHA-256 of sequence</b>${esc(row.sha)}</div><div><b>Source study</b>${split(row.studies).map(sourceLink).join('<br>')}</div></div><h3>Complete protein sequence</h3><pre class="sequence-detail" id="detail-sequence">Loading FASTA…</pre><button class="small-button" id="single-fasta">Download this protein · FASTA ↓</button><h3>Source observations</h3><div id="observations">Loading evidence records…</div><h3>Interpretation limits</h3><p class="muted">${esc(readable(row.limitations) || 'Consult the source-level rules and recorded experimental conditions.')} These are curated experimental labels, not predictions from the model.</p>`;
+  $('detail-content').innerHTML = `<p class="detail-kicker">EXPERIMENTAL EVIDENCE</p><h2>${esc(nativeLocus(row))}</h2><p class="muted">Database ID: ${esc(row.id)}</p><p><span class="badge ${row.label ? 'positive' : ''}">${row.label ? 'Positive · 1' : 'Small-effect control · 0'}</span></p><div class="detail-grid"><div><b>Native strain</b>${esc(row.strain)}</div><div><b>Gene / native locus</b>${esc(row.genes)}</div><div><b>Complete protein</b>${number(row.length)} amino acids</div><div><b>Homology group</b>${esc(row.group)}</div><div><b>SHA-256 of sequence</b>${esc(row.sha)}</div><div><b>Source study</b>${split(row.studies).map(sourceLink).join('<br>')}</div></div><h3>Complete protein sequence</h3><pre class="sequence-detail" id="detail-sequence" role="status" aria-live="polite" aria-busy="true">Loading protein sequence…</pre><button class="small-button" id="single-fasta" disabled>Download this protein · FASTA ↓</button><button class="small-button" id="retry-sequence" hidden>Retry sequence loading</button><h3>Source observations</h3><div id="observations">Loading evidence records…</div><h3>Interpretation limits</h3><p class="muted">${esc(readable(row.limitations) || 'Consult the source-level rules and recorded experimental conditions.')} These are curated experimental labels, not predictions from the model.</p>`;
   if (!dialog.open) dialog.showModal();
-  $('single-fasta').onclick = async () => {try {const map = await sequences(); download(`${row.id}.faa`, `>${row.id}\n${map.get(row.id)}\n`);}catch(error){$('detail-sequence').textContent=error.message;}};
-  sequences().then(map => {if (request === detailRequest) $('detail-sequence').textContent = map.get(row.id) || 'Sequence unavailable';}).catch(error => {if(request === detailRequest) $('detail-sequence').textContent=error.message;});
+  const sequenceElement = $('detail-sequence'), sequenceButton = $('single-fasta'), retryButton = $('retry-sequence');
+  const current = () => request === detailRequest && dialog.open && sequenceElement.isConnected;
+  let loadedSequence;
+  sequenceButton.onclick = () => {if (current() && loadedSequence) download(`${row.id}.faa`, `>${row.id}\n${loadedSequence}\n`);};
+  async function loadSequence() {
+    if (!current()) return;
+    loadedSequence = undefined;
+    sequenceButton.disabled = true;
+    retryButton.hidden = true;
+    sequenceElement.classList.remove('error');
+    sequenceElement.setAttribute('aria-busy', 'true');
+    sequenceElement.textContent = 'Loading protein sequence…';
+    try {
+      const sequence = await proteinSequence(row);
+      if (!current()) return;
+      loadedSequence = sequence;
+      sequenceElement.textContent = sequence;
+      sequenceElement.setAttribute('aria-busy', 'false');
+      sequenceButton.disabled = false;
+    } catch(error) {
+      if (!current()) return;
+      sequenceElement.textContent = error.name === 'AbortError' ? 'Sequence loading timed out. Please retry.' : 'The protein sequence could not be loaded. Please retry.';
+      sequenceElement.setAttribute('aria-busy', 'false');
+      sequenceElement.classList.add('error');
+      retryButton.hidden = false;
+    }
+  }
+  retryButton.onclick = loadSequence;
+  void loadSequence();
   try {
     const shard = row.sha.slice(0,2);
     if (!shardCache.has(shard)) shardCache.set(shard, json(`data/evidence/${shard}.json`));
@@ -82,6 +145,7 @@ async function detail(identifier) {
 }
 $('rows').addEventListener('click', event => {const button = event.target.closest('[data-id]');if(button) detail(button.dataset.id);});
 $('close-detail').onclick = () => $('detail').close();
+$('detail').addEventListener('close', () => {if (!$('detail').open) detailRequest++;});
 $('detail').addEventListener('click', event => {if (event.target === $('detail')) {const r = $('detail').getBoundingClientRect();if(event.clientX<r.left || event.clientX>r.right || event.clientY<r.top || event.clientY>r.bottom) $('detail').close();}});
 for (const id of ['search','study','strain','label']) $(id).addEventListener(id==='search' ? 'input' : 'change', applyFilters);
 $('reset').onclick = () => {for(const id of ['search','study','strain','label']) $(id).value='';applyFilters();};
