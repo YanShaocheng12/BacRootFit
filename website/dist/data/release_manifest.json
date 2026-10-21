@@ -112,7 +112,8 @@
     "config/H3_full_groups.tsv": "b15c20b29325956ef05e5799d2b8dd9d84c63dfb4816d437cfa8526a5b1d9bc1",
     "config/internal_full_groups.tsv": "4047479f3cf2233da685293507c1a36d14012be44dca6f275abe598923caf03c",
     "config/H3_group_policy.json": "cca9512a846f2d5ac2399f52d3096d142eea6f422544c43ed195e2b01f8f2fd0",
-    "config/encoder_checkpoints.json": "f51b4116534784ef7ab5a4957d4a4217c17f95eb5db5b8dacf80b61c0a595417"
+    "config/encoder_checkpoints.json": "f51b4116534784ef7ab5a4957d4a4217c17f95eb5db5b8dacf80b61c0a595417",
+    "config/study_citation_overrides.tsv": "d0d8a2fcdc4013999fecee8b38676a711dadf296739ef3b208b5b7af1a83a1c6"
   },
   "metadata_updated": "2026-10-21",
   "software_version": "1.0.0",

@@ -87,8 +87,8 @@ for (const id of ['search','study','strain','label']) $(id).addEventListener(id=
 $('reset').onclick = () => {for(const id of ['search','study','strain','label']) $(id).value='';applyFilters();};
 $('previous').onclick = () => {page--;render();};$('next').onclick = () => {page++;render();};
 $('export-tsv').onclick = () => {
-  const headers = ['sample_id','label','strain','gene_ids','studies','length','homology_group','sequence_sha256'];
-  const content = [headers, ...filtered.map(r => [r.id,r.label,r.strain,r.genes,r.studies,r.length,r.group,r.sha])].map(row => row.map(v=>String(v).replace(/[\t\r\n]/g,' ')).join('\t')).join('\n')+'\n';
+  const headers = ['sample_id','label','strain','gene_ids','studies','study_names','source_dois','length','homology_group','sequence_sha256'];
+  const content = [headers, ...filtered.map(r => [r.id,r.label,r.strain,r.genes,r.studies,split(r.studies).map(studyName).join('; '),split(r.studies).map(s=>catalogue[s]?.doi || '').join('; '),r.length,r.group,r.sha])].map(row => row.map(v=>String(v).replace(/[\t\r\n]/g,' ')).join('\t')).join('\n')+'\n';
   download('BacRootFit_matched_records.tsv',content,'text/tab-separated-values');
 };
 $('export-fasta').onclick = async () => {

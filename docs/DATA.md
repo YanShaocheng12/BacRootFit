@@ -17,11 +17,13 @@ Release v1.0.0 contains 14,505 unique complete proteins (1,036 label 1, 13,469 l
 | `data/literature_selection/` | Actual search expressions, retrieved-record reconciliation and source dispositions |
 | `external/H3/` | Separate historical duckweed surface-colonization cohort; never training data |
 
-`data/data_dictionary.tsv` describes original fields. Sequence SHA-256 values refer to the unwrapped amino-acid sequence. The `V27_part` field and `config/plan.json` define the released split; `original_split` in older trace tables is historical and must not replace them.
+`data/data_dictionary.tsv` describes original fields. Sequence SHA-256 values refer to the unwrapped amino-acid sequence. The released partition is stored in the actual field `V27_part` and defined by `config/plan.json`; the field name is preserved for compatibility. `original_split` in older trace tables is historical and must not replace the released partition.
+
+Study identifiers are stable database keys, not authoritative author names. For example, `Fan2013` identifies DOI `10.5423/PPJ.OA.10.2012.0155`, whose correct citation is **Dietel et al. (2013)**. The identifier is retained to preserve record links. Verified citation corrections are supplied in `config/study_citation_overrides.tsv`; the website's downloadable study tables include the corrected display name and author metadata. Matched-record exports retain the stable `studies` IDs alongside readable `study_names` and `source_dois`.
 
 ## Labels
 
-Label 1 denotes a qualified genetic-perturbation phenotype linked to reduced colonization under a source experiment's conditions. Each source retains its own published effect direction, author call, statistical criteria, condition handling and evidence tier. The detailed per-study rules are included in `data/context/study_positive_and_growth_rules.tsv`; there is no fabricated universal positive p-value rule. General-growth/outgrowth control differs by study and is recorded rather than assumed.
+Label 1 denotes a qualified genetic-perturbation phenotype linked to reduced colonization under a source experiment's conditions. Each source retains its own published effect direction, author call, statistical criteria, condition handling and evidence tier. Positive-label criteria follow the original study-specific definitions, detailed in `data/context/study_positive_and_growth_rules.tsv`. General-growth/outgrowth control differs by study and is recorded rather than assumed.
 
 Label 0 denotes a tested, quality-qualified small-effect non-hit. After source-level QC and negative qualification, each retained eligible endpoint must have a finite log2 effect within log2(0.8) to log2(1.2). That bound applies to the recorded source effect definition; it is not universally an absolute CFU ratio and is not an equivalence-test certificate. Unmeasured, missing or ambiguous proteins are not assigned zero. No 1:3 downsampling or score-based filtering was applied to the final database.
 
