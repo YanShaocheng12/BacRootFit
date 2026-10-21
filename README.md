@@ -2,7 +2,7 @@
 
 BacRootFit provides a curated database of bacterial root-colonization evidence and a pretrained protein-sequence prediction model.
 
-**[Browse the database](https://yanshaocheng12.github.io/BacRootFit/)** · **[Download software v1.0.1](https://github.com/YanShaocheng12/BacRootFit/releases/tag/v1.0.1)** · **[Data and models v1.0.0](https://github.com/YanShaocheng12/BacRootFit/releases/tag/v1.0.0)**
+**[Browse the database](https://yanshaocheng12.github.io/BacRootFit/)** · **[Download BacRootFit v1.0.0](https://github.com/YanShaocheng12/BacRootFit/releases/tag/v1.0.0)**
 
 The database contains 14,505 complete proteins from 21 studies, with experimental labels and links to source evidence. The pretrained predictor uses frozen ProtT5 features and an RBF-SVM.
 
@@ -11,7 +11,7 @@ The database contains 14,505 complete proteins from 21 studies, with experimenta
 Use Python 3.10. **Predicting a new FASTA requires a compatible NVIDIA GPU, CUDA-enabled PyTorch and the ProtT5 encoder.** Cached-feature prediction can run on CPU. See [installation and environments](docs/INSTALLATION.md) for dependencies and offline installation.
 
 ```bash
-git clone --branch v1.0.1 https://github.com/YanShaocheng12/BacRootFit.git
+git clone --branch v1.0.0 https://github.com/YanShaocheng12/BacRootFit.git
 cd BacRootFit
 python -m pip install -e .
 bacrootfit assets --only data models
@@ -44,7 +44,7 @@ The separate development model is provided to reproduce the released evaluations
 
 ## Data and model downloads
 
-Software **v1.0.1** includes all configuration files, cohort groups and reproduction helpers. It uses unchanged **v1.0.0 data and model assets**, downloaded automatically by `bacrootfit assets`.
+**BacRootFit v1.0.0** includes the code, configuration files, cohort groups and reproduction helpers. Downloadable data and model assets belong to the same release and are installed by `bacrootfit assets`.
 
 - [Database search, evidence and data downloads](https://yanshaocheng12.github.io/BacRootFit/)
 - [Data, models, ProtT5 mean features and stored results](https://github.com/YanShaocheng12/BacRootFit/releases/tag/v1.0.0)

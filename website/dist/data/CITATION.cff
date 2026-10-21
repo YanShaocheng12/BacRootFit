@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "Please cite this versioned BacRootFit software and database resource."
 type: software
 title: "BacRootFit: bacterial root-colonization database and prediction software"
-version: 1.0.1
+version: 1.0.0
 authors:
   - family-names: Yan
     given-names: Shaocheng

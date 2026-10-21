@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "bacrootfit"
-version = "1.0.1"
+version = "1.0.0"
 description = "Reproducible data and frozen-protein-representation prediction for BacRootFit"
 requires-python = ">=3.10"
 dependencies = ["numpy==2.2.6", "scipy==1.15.3", "scikit-learn==1.7.2", "joblib==1.6.0"]

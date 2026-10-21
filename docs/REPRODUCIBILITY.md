@@ -2,7 +2,7 @@
 
 ## Software and assets
 
-Software **v1.0.1** includes the complete configuration, fixed partitions, internal/H3 bootstrap groups and executable reproduction helpers. It uses unchanged **v1.0.0 data and model assets**. Install all assets with `bacrootfit assets` before reproducing analyses.
+**BacRootFit v1.0.0** includes the complete code, configuration, fixed partitions, internal/H3 bootstrap groups and executable reproduction helpers, together with downloadable data and model assets. Install all assets with `bacrootfit assets` before reproducing analyses.
 
 | Task | Materials and requirements |
 | --- | --- |

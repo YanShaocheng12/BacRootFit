@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "installed_software_version": "1.0.1",
+  "installed_software_version": "1.0.0",
   "data_model_version": "1.0.0",
   "immutable_assets_installed": 4,
   "root_citation_retained": true,
@@ -14,7 +14,7 @@
       "No unpublished-work citation; native loci and human-readable study/status labels",
       "Readable assay, replicate, QC and limitation text; source links and sequence preserved",
       "Stable IDs preserved in matched TSV/FASTA exports",
-      "Resource-only citation and distinct software/data versions",
+      "Resource-only citation and one shared resource version",
       "Mobile layout without viewport overflow"
     ],
     "page_errors": []
