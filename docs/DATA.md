@@ -17,7 +17,7 @@ Release v1.0.0 contains 14,505 unique complete proteins (1,036 label 1, 13,469 l
 | `data/literature_selection/` | Actual search expressions, retrieved-record reconciliation and source dispositions |
 | `external/H3/` | Separate historical duckweed surface-colonization cohort; never training data |
 
-`data/data_dictionary.tsv` describes original fields. Sequence SHA-256 values refer to the unwrapped amino-acid sequence. The `V27_part` field and `config/plan.json` define the repaired split; `original_split` in older trace tables is historical and must not replace them.
+`data/data_dictionary.tsv` describes original fields. Sequence SHA-256 values refer to the unwrapped amino-acid sequence. The `V27_part` field and `config/plan.json` define the released split; `original_split` in older trace tables is historical and must not replace them.
 
 ## Labels
 

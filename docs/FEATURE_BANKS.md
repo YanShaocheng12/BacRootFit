@@ -10,7 +10,7 @@ Install the package and assets as in the README. Install a PyTorch build compati
 python -m pip install -r environments/requirements-encoder.txt
 ```
 
-The paper environment used Python 3.10, PyTorch 2.13.0+cu130, Transformers 5.18.0 and an RTX 5070 with 12 GB VRAM. Exact dependency versions and the original environment are in `environments/`. `build_feature_banks.py` uses native Transformers classes with remote code disabled.
+The reference environment used Python 3.10, PyTorch 2.13.0+cu130, Transformers 5.18.0 and an RTX 5070 with 12 GB VRAM. Exact dependency versions and the original environment are in `environments/`. `build_feature_banks.py` uses native Transformers classes with remote code disabled.
 
 | Key | Checkpoint | Native hidden precision | Storage / dimension |
 | --- | --- | --- | --- |
@@ -55,4 +55,4 @@ bacrootfit train --root . --features-dir full_banks --all-configurations --out r
 
 Training verifies bank dimensions, row identity, complete status and file hashes before fitting. `complete.json` records whether regenerated file hashes match the historical bank; floating-point differences across kernels/hardware may prevent byte identity. Report the regenerated bank identities with new results instead of presenting them as the original frozen arrays.
 
-This path regenerates the feature banks and reruns the registered search. It does not rerun source-paper data curation or rebuild the historical bridge-aware homology graph; the released evidence tables and fixed partitions remain its inputs. Original extraction and downstream scripts are retained in the results asset under `research_archive/` for audit.
+This path regenerates the feature banks and reruns the registered search. It does not rerun source-study data curation or rebuild the historical bridge-aware homology graph; the released evidence tables and fixed partitions remain its inputs. Original extraction and downstream scripts are retained in the results asset under `research_archive/` for audit.

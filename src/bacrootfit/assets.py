@@ -6,12 +6,14 @@ import urllib.request
 from pathlib import Path, PurePosixPath
 from zipfile import ZipFile
 from .io import sha256
+from . import __version__
 
 
 def published_url(manifest, asset):
     repository = manifest["repository"].removeprefix("https://github.com/").strip("/")
-    endpoint = f"https://api.github.com/repos/{repository}/releases/tags/v{manifest['version']}"
-    request = urllib.request.Request(endpoint, headers={"User-Agent": "BacRootFit/1.0.0"})
+    tag = manifest.get("artifact_release_tag", f"v{manifest['version']}")
+    endpoint = f"https://api.github.com/repos/{repository}/releases/tags/{tag}"
+    request = urllib.request.Request(endpoint, headers={"User-Agent": f"BacRootFit/{__version__}"})
     try:
         with urllib.request.urlopen(request, timeout=30) as response:
             release = json.load(response)
@@ -25,9 +27,11 @@ def published_url(manifest, asset):
     return record["browser_download_url"]
 
 
-def unpack_checked(archive, root):
+def unpack_checked(archive, root, retained_metadata=None):
     root = Path(root).resolve()
+    retained_metadata = retained_metadata or {}
     with ZipFile(archive) as bundle:
+        members = []
         for item in bundle.infolist():
             name = PurePosixPath(item.filename)
             if name.is_absolute() or ".." in name.parts or "\\" in item.filename or ":" in item.filename:
@@ -36,12 +40,18 @@ def unpack_checked(archive, root):
             if not target.is_relative_to(root):
                 raise ValueError("Archive destination escapes root")
             if target.exists() and not item.is_dir():
+                # New software citation metadata coexist with immutable older data
+                # archives. Only an exact, manifest-pinned software file is retained.
+                retained = retained_metadata.get(item.filename)
+                if retained and sha256(target) == retained:
+                    continue
                 with bundle.open(item) as stream:
                     import hashlib
                     expected = hashlib.file_digest(stream, "sha256").hexdigest() if hasattr(hashlib, "file_digest") else hashlib.sha256(stream.read()).hexdigest()
                 if sha256(target) != expected:
                     raise FileExistsError(f"Refusing to overwrite a changed file: {target}")
-        bundle.extractall(root)
+            members.append(item)
+        bundle.extractall(root, members=members)
 
 
 def main(argv=None):
@@ -58,7 +68,7 @@ def main(argv=None):
             path = args.from_dir / asset["filename"]
             if sha256(path) != asset["sha256"]:
                 raise ValueError(f"Asset checksum mismatch: {path.name}")
-            unpack_checked(path, args.root)
+            unpack_checked(path, args.root, manifest.get("software_metadata_files"))
         else:
             url = asset.get("download_url") or published_url(manifest, asset)
             with tempfile.TemporaryDirectory() as temporary:
@@ -66,5 +76,5 @@ def main(argv=None):
                 urllib.request.urlretrieve(url, path)
                 if sha256(path) != asset["sha256"]:
                     raise ValueError("Downloaded asset checksum mismatch")
-                unpack_checked(path, args.root)
+                unpack_checked(path, args.root, manifest.get("software_metadata_files"))
         print(f"Installed and verified: {asset['filename']}")

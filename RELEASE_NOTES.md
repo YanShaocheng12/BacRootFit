@@ -1,18 +1,15 @@
-# Post-release maintenance (main, 2026-10-21)
+# Software v1.0.1
 
-- Synchronize public availability metadata and verified direct download URLs.
-- Replace preparation/handoff wording with public installation and reproduction instructions.
-- Require complete evaluation cohorts by default; allow explicit subset analyses with coverage counts.
-- Supply the original internal/H3 bootstrap groups, paper-compatible resampling and interval reproduction helper.
-- Add per-encoder full-bank generation commands, content locks and explicit reproduction limits.
-- Present formal release terminology and readable source locators in the database browser.
+Compatible with data/model assets v1.0.0.
 
-Paper data, model weights, partitions, labels and the original v1.0.0 ZIP assets are unchanged. Use the current Git checkout for these maintenance additions; the original v1.0.0 source snapshot preserves its original interface.
+- Complete source release includes internal and H3 bootstrap groups, checkpoint locks and reproduction helpers.
+- Evaluation requires complete cohort membership by default and supports explicitly requested subset analyses with coverage counts.
+- Per-encoder feature-bank generation commands support the full registered comparison.
+- User documentation separates prediction, installation, evaluation and reproducibility instructions.
+- Database records show native loci, readable evidence descriptions and appropriately rounded display values; downloads retain stable IDs and full precision.
 
-# BacRootFit v1.0.0
+## Data and models v1.0.0
 
-Manuscript-aligned resource: 14,505 complete proteins, experimental labels and evidence tracking, fixed homology partitions, 340-configuration development results and separate development/deployment SVM bundles. Public CLI supports checked raw-feature inference, pinned ProtT5 FASTA extraction, fixed-fold training, locked-threshold evaluation and data integrity verification.
+14,505 complete proteins from 21 contributing studies, with experimental labels, source evidence, sequence mappings and fixed homology-group partitions. Separate full-data and development model bundles, raw ProtT5 mean features and stored analysis results are available as checksummed assets. The H3 duckweed surface-colonization transfer cohort is distributed separately from the training collection.
 
-The data archive includes the historical H3 duckweed surface-colonization transfer cohort separately from formal training data. No post-manuscript candidate source was added to the training database. The lightweight feature archive supplies raw ProtT5 means sufficient for reproducing the selected model; the full five-encoder residue collection remains a separate large-data requirement.
-
-Archive identities and version-specific hashes are listed in release_manifest.json. Code is MIT; original curation contributions are CC BY 4.0; upstream terms remain applicable.
+The data/model ZIPs and their numerical results are unchanged in software v1.0.1. See [grouping history](docs/GROUPING_HISTORY.md) for the provenance and analysis impact of the final partitions.

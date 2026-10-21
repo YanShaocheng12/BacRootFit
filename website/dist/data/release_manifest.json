@@ -115,5 +115,12 @@
     "config/encoder_checkpoints.json": "f51b4116534784ef7ab5a4957d4a4217c17f95eb5db5b8dacf80b61c0a595417"
   },
   "metadata_updated": "2026-10-21",
-  "maintenance_source": "https://github.com/YanShaocheng12/BacRootFit/tree/main"
+  "software_version": "1.0.1",
+  "data_version": "1.0.0",
+  "model_version": "1.0.0",
+  "artifact_release_tag": "v1.0.0",
+  "software_release_url": "https://github.com/YanShaocheng12/BacRootFit/releases/tag/v1.0.1",
+  "software_metadata_files": {
+    "CITATION.cff": "f084e54825e45832adc5e9528b11478299b2b317a8f021182c142a6a9bfe4163"
+  }
 }

@@ -62,6 +62,9 @@ def main(argv=None):
     for relative, expected in supplements.items():
         if not (root / relative).is_file() or sha256(root / relative) != expected:
             raise ValueError(f"Supplementary file checksum differs: {relative}")
+    for relative, expected in manifest.get("software_metadata_files", {}).items():
+        if not (root / relative).is_file() or sha256(root / relative) != expected:
+            raise ValueError(f"Software metadata checksum differs: {relative}")
     for role in ["development", "deployment"]:
         folder = root / "models" / role
         if not folder.exists():

@@ -1,23 +1,33 @@
 # BacRootFit model card
 
-## Task and inputs
+## Task and input
 
-Prioritize individual bacterial protein-coding genes using the complete encoded protein sequence. Training labels describe experimental perturbation phenotypes in particular plant-associated conditions, not an intrinsic context-free function. The sequence-only model receives no host or experimental condition at inference.
+The model prioritizes bacterial protein-coding genes from their complete protein sequences. Labels describe genetic-perturbation phenotypes in source experiments. The sequence-only model receives no host or experimental-condition input.
 
-## Architecture
+## Model and preprocessing
 
-Frozen ProtT5 encoder, exact pinned revision in each bundle; complete 1,022-residue nonoverlapping windows; amino-acid mean pooling without special tokens; per-protein L2 normalization; StandardScaler fitted on the relevant training pool; RBF-SVM with C=1 and balanced training sample weights. Gamma is 1/(feature dimension × training-feature variance), matching the registered multiplier 1. Probability fitting, PCA, encoder fine-tuning and ensembling are absent.
+Frozen ProtT5 residue means are followed by per-protein L2 normalization, a training-fitted StandardScaler and an RBF-SVM with balanced training sample weights. The selected configuration has C=1 and the registered gamma multiplier of 1. Long proteins use complete nonoverlapping 1,022-residue windows, excluding padding and special tokens. Exact encoder revisions and preprocessing settings are supplied with the bundles.
 
-## Two bundles
+## Which model to use
 
-The development bundle was fitted on 11,664 development proteins. Its fixed raw-score threshold 0.17759950571640748 came from pooled fivefold development OOF predictions. Internal test and H3 results in the paper belong to this bundle.
+| Bundle | Training pool | Use |
+| --- | --- | --- |
+| `models/deployment` | All 14,505 database proteins | Routine prediction of new sequences |
+| `models/development` | 11,664 development proteins | Reproduce the released held-out evaluations |
 
-The deployment bundle was fitted after evaluation on all 14,505 proteins. Its raw-score threshold −0.028397905657864597 came from a separate full-database fivefold OOF pass of the already selected recipe. It is intended for subsequent application. Predictions from this full-database refit on former internal-test proteins are training-exposed and do not provide an independent test estimate.
+Each bundle includes its own scaler and decision threshold, applied automatically. Approximate raw thresholds are −0.0284 (deployment) and 0.1776 (development); exact values remain in each `bundle.json`. Do not transfer thresholds between bundles. Scores are uncalibrated decision values, not probabilities.
 
-Thresholds are stored with the corresponding scaler and weights. A score ≥ threshold is positive. Scores are uncalibrated decision values; a score of 0.8 does not mean 80% probability. Threshold values cannot be compared across bundles as probability cutoffs.
+## Evaluation summary
 
-## Evaluation and limitations
+The following results use the **development** bundle at its fixed threshold. They do not describe a separate test of the full-data deployment refit.
 
-Primary internal testing uses repaired homology-group separation, not complete study or strain exclusion. LOSO is a separate fixed-configuration supplementary analysis on seven dual-class studies, with held-out source/strain/group exclusions. H3 is a historically examined three-hour duckweed surface phenotype-transfer cohort, not root-specific independent prospective validation.
+| Cohort | Proteins | ROC-AUC | AP | MCC |
+| --- | --- | --- | --- | --- |
+| Internal homology-group-isolated test | 2,841 | 0.8481 | 0.4519 | 0.3968 |
+| H3 duckweed surface-colonization transfer | 1,878 | 0.8577 | 0.4011 | 0.3683 |
 
-The class distribution is imbalanced. Interpret AP, precision and candidate enrichment alongside cohort prevalence. Class-balanced fitting does not rebalance test cohorts. Non-hit controls remain experimental-condition-specific; absence of statistical evidence is not proof of universal biological irrelevance. General growth effects and incomplete perturbation efficacy may influence source labels. The model should guide candidate prioritization and requires independent experimental assessment for a new biological context.
+H3 contains 86 positives and 1,792 controls from a three-hour duckweed surface assay. It is phenotype-transfer evidence, rather than a root-specific or newly blind source. Cross-study supplementary evaluation uses seven dual-class studies with source, strain and homology exclusions. Detailed metrics and uncertainty are in the results asset.
+
+## Interpretation
+
+Class prevalence influences precision and AP. Experimental non-hits are condition-specific controls. General growth effects and incomplete perturbation efficacy can influence source labels. Predictions prioritize candidates and require independent assessment in a new biological context.

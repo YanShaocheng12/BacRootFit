@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "installed_software_version": "1.0.1",
+  "data_model_version": "1.0.0",
+  "immutable_assets_installed": 4,
+  "root_citation_retained": true,
+  "example_predictions": 3,
+  "helper_complete_cohorts_checked": true,
+  "protected_artifacts_unchanged": 10,
+  "scope": "fresh source and installed package with existing scientific dependencies; no model refitting",
+  "website_local": {
+    "status": "PASS",
+    "checks": [
+      "No unpublished-work citation; native loci and human-readable study/status labels",
+      "Readable assay, replicate, QC and limitation text; source links and sequence preserved",
+      "Stable IDs preserved in matched TSV/FASTA exports",
+      "Resource-only citation and distinct software/data versions",
+      "Mobile layout without viewport overflow"
+    ],
+    "page_errors": []
+  },
+  "unit_tests_passed": 10
+}

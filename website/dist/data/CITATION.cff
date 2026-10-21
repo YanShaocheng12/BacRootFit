@@ -1,8 +1,8 @@
 cff-version: 1.2.0
-message: "Please cite the BacRootFit manuscript and this versioned data/software resource."
+message: "Please cite this versioned BacRootFit software and database resource."
 type: software
-title: "BacRootFit: predicting bacterial root colonization-associated genes using protein language models"
-version: 1.0.0
+title: "BacRootFit: bacterial root-colonization database and prediction software"
+version: 1.0.1
 authors:
   - family-names: Yan
     given-names: Shaocheng

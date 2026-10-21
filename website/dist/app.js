@@ -2,10 +2,22 @@
 const $ = id => document.getElementById(id);
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const number = n => n.toLocaleString('en-US');
-let records = [], filtered = [], catalogue = {}, rules = {}, page = 0, sequencesPromise;
+let records = [], filtered = [], catalogue = {}, rules = {}, display = {labels:{},studies:{}}, page = 0, sequencesPromise;
 const perPage = 50;
 const shardCache = new Map();
 const split = text => String(text || '').split(';').map(x => x.trim()).filter(Boolean);
+const readable = value => split(value).map(v => display.labels[v] || v.replace(/_/g, ' ')).join(' ');
+const studyName = study => display.studies[study] || study.replace(/_/g, ' ');
+const nativeLocus = row => split(row.genes).map(v => v.split('|').pop()).join('; ') || row.id;
+function numeric(value) {
+  if (value === '' || value === null || value === undefined) return '';
+  const n = Number(value); if (!Number.isFinite(n)) return readable(value);
+  return n && (Math.abs(n)<.001 || Math.abs(n)>=10000) ? n.toExponential(2) : String(Number(n.toPrecision(4)));
+}
+function conditionName(obs) {
+  if (/_[a-f0-9]{10}$/.test(obs.condition || '')) return 'Source-defined condition (see source locator)';
+  return readable(obs.condition);
+}
 async function json(path) { const r = await fetch(path); if (!r.ok) throw new Error(`${path}: HTTP ${r.status}`); return r.json(); }
 function download(filename, content, type = 'text/plain') {
   const url = URL.createObjectURL(new Blob([content], {type}));
@@ -34,9 +46,9 @@ function render() {
   page = Math.min(page, pages-1);
   $('count').textContent = `${number(filtered.length)} of ${number(records.length)} proteins · ${number(filtered.filter(r => r.label === 1).length)} positives`;
   $('rows').innerHTML = filtered.slice(page*perPage, (page+1)*perPage).map(row => `<tr>
-    <td><button class="id-link" data-id="${esc(row.id)}">${esc(row.id)}</button><small title="${esc(row.genes)}">${esc(row.genes)}</small></td>
+    <td><button class="id-link" data-id="${esc(row.id)}" title="${esc(row.genes)}">${esc(nativeLocus(row))}</button><small>Database ID: ${esc(row.id)}</small></td>
     <td><span class="badge ${row.label ? 'positive' : ''}">${row.label ? 'Positive · 1' : 'Small-effect control · 0'}</span></td>
-    <td>${esc(row.strain)}</td><td>${esc(row.studies)}<small>${esc(row.tier)}</small></td><td>${number(row.length)} aa</td>
+    <td>${esc(row.strain)}</td><td>${split(row.studies).map(s=>esc(studyName(s))).join('; ')}<small>${esc(readable(row.tier))}</small></td><td>${number(row.length)} aa</td>
     <td><button class="evidence-button" data-id="${esc(row.id)}" aria-label="Evidence for ${esc(row.id)}">↗</button></td></tr>`).join('') || '<tr><td colspan="6">No matching records. Try a broader query or reset the filters.</td></tr>';
   $('page').textContent = `${page+1} / ${pages}`;
   $('previous').disabled = page === 0; $('next').disabled = page >= pages-1;
@@ -45,14 +57,14 @@ function render() {
 function sourceLink(study) {
   const c = catalogue[study] || {}, raw = c.source_url || (c.doi ? `https://doi.org/${c.doi}` : '');
   const url = /^https:\/\//.test(raw) ? raw : '';
-  return url ? `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(study)} · original source ↗</a>` : esc(study);
+  return url ? `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(studyName(study))} · original source ↗</a>` : esc(studyName(study));
 }
 let detailRequest = 0;
 async function detail(identifier) {
   const request = ++detailRequest;
   const row = records.find(x => x.id === identifier); if (!row) return;
   const dialog = $('detail');
-  $('detail-content').innerHTML = `<p class="detail-kicker">FORMAL DATABASE / EXPERIMENTAL EVIDENCE</p><h2>${esc(row.id)}</h2><p><span class="badge ${row.label ? 'positive' : ''}">${row.label ? 'Positive · 1' : 'Small-effect control · 0'}</span></p><div class="detail-grid"><div><b>Native strain</b>${esc(row.strain)}</div><div><b>Gene / native locus</b>${esc(row.genes)}</div><div><b>Complete protein</b>${number(row.length)} amino acids</div><div><b>Homology group</b>${esc(row.group)}</div><div><b>SHA-256 of sequence</b>${esc(row.sha)}</div><div><b>Source study</b>${split(row.studies).map(sourceLink).join('<br>')}</div></div><h3>Complete protein sequence</h3><pre class="sequence-detail" id="detail-sequence">Loading FASTA…</pre><button class="small-button" id="single-fasta">Download this protein · FASTA ↓</button><h3>Source observations</h3><div id="observations">Loading evidence records…</div><h3>Interpretation limits</h3><p class="muted">${esc(row.limitations || 'Consult the source-level rules and recorded experimental conditions.')} These are curated experimental labels, not predictions from the model.</p>`;
+  $('detail-content').innerHTML = `<p class="detail-kicker">EXPERIMENTAL EVIDENCE</p><h2>${esc(nativeLocus(row))}</h2><p class="muted">Database ID: ${esc(row.id)}</p><p><span class="badge ${row.label ? 'positive' : ''}">${row.label ? 'Positive · 1' : 'Small-effect control · 0'}</span></p><div class="detail-grid"><div><b>Native strain</b>${esc(row.strain)}</div><div><b>Gene / native locus</b>${esc(row.genes)}</div><div><b>Complete protein</b>${number(row.length)} amino acids</div><div><b>Homology group</b>${esc(row.group)}</div><div><b>SHA-256 of sequence</b>${esc(row.sha)}</div><div><b>Source study</b>${split(row.studies).map(sourceLink).join('<br>')}</div></div><h3>Complete protein sequence</h3><pre class="sequence-detail" id="detail-sequence">Loading FASTA…</pre><button class="small-button" id="single-fasta">Download this protein · FASTA ↓</button><h3>Source observations</h3><div id="observations">Loading evidence records…</div><h3>Interpretation limits</h3><p class="muted">${esc(readable(row.limitations) || 'Consult the source-level rules and recorded experimental conditions.')} These are curated experimental labels, not predictions from the model.</p>`;
   if (!dialog.open) dialog.showModal();
   $('single-fasta').onclick = async () => {try {const map = await sequences(); download(`${row.id}.faa`, `>${row.id}\n${map.get(row.id)}\n`);}catch(error){$('detail-sequence').textContent=error.message;}};
   sequences().then(map => {if (request === detailRequest) $('detail-sequence').textContent = map.get(row.id) || 'Sequence unavailable';}).catch(error => {if(request === detailRequest) $('detail-sequence').textContent=error.message;});
@@ -63,8 +75,8 @@ async function detail(identifier) {
     if (request !== detailRequest) return;
     $('observations').innerHTML = evidence.map(obs => {
       const rule = rules[obs.study] || {};
-      const summary = [['Host',obs.host],['Compartment',obs.compartment],['Assay',obs.assay],['Condition',obs.condition],['Effect',obs.effect ? `${obs.effect} (${obs.effect_type || 'source definition'})` : 'not recorded numerically'],['P value',obs.p_value],['Adjusted P / q',obs.q_value],['Biological replicates',obs.replicates],['Quality / author call',obs.quality_flag || obs.author_call],['Source locator',obs.public_locator || 'See the source reference and released evidence table'],['Evidence limitation',obs.evidence_limitations]].filter(([,v]) => v).map(([key,value]) => `<p><b>${esc(key)}:</b> ${esc(value)}</p>`).join('');
-      return `<article class="observation"><h4>${sourceLink(obs.study)} · ${esc(obs.measurement_id)}</h4>${summary}<details><summary>Study-level label and growth-control rules</summary><p><b>Positive rule:</b> ${esc(rule.positive_rule || 'See source audit')}</p><p><b>General growth control:</b> ${esc(rule.growth_design || '')}</p><p><b>Applied curation:</b> ${esc(rule.growth_applied || '')}</p><p><b>Remaining limitation:</b> ${esc(rule.growth_limit || '')}</p></details></article>`;
+      const summary = [['Host',obs.host],['Compartment',obs.compartment],['Assay',readable(obs.assay)],['Condition',conditionName(obs)],['Effect',obs.effect ? `${numeric(obs.effect)} (${readable(obs.effect_type) || 'source definition'})` : 'not recorded numerically'],['P value',numeric(obs.p_value)],['Adjusted P / q',numeric(obs.q_value)],['Biological replicates',readable(obs.replicates)],['Quality / author call',readable(obs.quality_flag || obs.author_call)],['Source locator',obs.public_locator || 'See the source reference and released evidence table'],['Evidence limitation',readable(obs.evidence_limitations)]].filter(([,v]) => v).map(([key,value]) => `<p><b>${esc(key)}:</b> ${esc(value)}</p>`).join('');
+      return `<article class="observation"><h4>${sourceLink(obs.study)}</h4>${summary}<details class="record-identifiers"><summary>Record identifiers</summary><p><b>Study ID:</b> ${esc(obs.study)}</p><p><b>Measurement ID:</b> ${esc(obs.measurement_id)}</p><p><b>Condition ID:</b> ${esc(obs.condition)}</p></details><details><summary>Study-level label and growth-control rules</summary><p><b>Positive rule:</b> ${esc(rule.positive_rule || 'See source audit')}</p><p><b>General growth control:</b> ${esc(rule.growth_design || '')}</p><p><b>Applied curation:</b> ${esc(rule.growth_applied || '')}</p><p><b>Remaining limitation:</b> ${esc(rule.growth_limit || '')}</p></details></article>`;
     }).join('') || '<p>See the full traceability tables in the data package.</p>';
   } catch(error) {if (request===detailRequest) $('observations').textContent = `Evidence could not be loaded: ${error.message}`;}
 }
@@ -87,12 +99,12 @@ $('export-fasta').onclick = async () => {
 };
 async function start() {
   try {
-    const data = await json('data/records.json');records=data.records;catalogue=data.studies;rules=data.rules;
-    records.forEach(row=>row.search=[row.id,row.genes,row.strain,row.studies,row.group,row.sha].join(' ').toLowerCase());
+    const [data, presentation] = await Promise.all([json('data/records.json'),json('data/display_labels.json')]);records=data.records;catalogue=data.studies;rules=data.rules;display=presentation;
+    records.forEach(row=>row.search=[row.id,row.genes,row.strain,row.studies,split(row.studies).map(studyName).join(' '),row.group,row.sha].join(' ').toLowerCase());
     for (const [id,values] of [['study',[...new Set(records.flatMap(r=>split(r.studies)))].sort()],['strain',[...new Set(records.flatMap(r=>split(r.strain)))].sort()]]) {
-      for (const value of values) {const option=document.createElement('option');option.value=option.textContent=value;$(id).append(option);}
+      for (const value of values) {const option=document.createElement('option');option.value=value;option.textContent=id==='study' ? studyName(value) : value;$(id).append(option);}
     }
     applyFilters();
-  } catch(error) {$('count').textContent=`Unable to load data. Serve this directory with HTTP, then reload. ${error.message}`;$('rows').innerHTML='<tr><td colspan="6">Database unavailable. The versioned data package remains available in Downloads.</td></tr>';}
+  } catch(error) {$('count').textContent=`The database could not be loaded. Please reload or use the data download. ${error.message}`;$('rows').innerHTML='<tr><td colspan="6">Database unavailable. The versioned data package remains available in Downloads.</td></tr>';}
 }
 start();
