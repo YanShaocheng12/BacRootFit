@@ -5,15 +5,12 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "bacrootfit"
 version = "1.0.0"
-description = "Reproducible data and frozen-protein-representation prediction for BacRootFit"
-requires-python = ">=3.10"
-dependencies = ["numpy==2.2.6", "scipy==1.15.3", "scikit-learn==1.7.2", "joblib==1.6.0"]
+description = "Protein sequence scoring with frozen protein language models and BacRootFit classifiers"
+requires-python = ">=3.10,<3.13"
+dependencies = ["numpy==2.2.6", "scikit-learn==1.7.2", "joblib>=1.4,<2", "xgboost==2.1.4", "torch>=2.6", "transformers==5.18.0", "sentencepiece>=0.2", "safetensors>=0.4"]
 
 [project.scripts]
 bacrootfit = "bacrootfit.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
-
-[tool.pytest.ini_options]
-testpaths = ["tests"]

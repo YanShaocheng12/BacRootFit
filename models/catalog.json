@@ -1,0 +1,238 @@
+{
+  "models": {
+    "prott5_lr": {
+      "description": "prott5 + LR",
+      "family": "traditional_classifier",
+      "method": "LR",
+      "encoders": [
+        "prott5"
+      ],
+      "scalers": {
+        "prott5": "models/scalers/classic_prott5.joblib"
+      },
+      "artifact": "models/classifiers/prott5_lr.joblib",
+      "threshold": -1.916246829082621,
+      "training_seed": null
+    },
+    "prott5_svm": {
+      "description": "prott5 + RBF-SVM",
+      "family": "traditional_classifier",
+      "method": "RBF-SVM",
+      "encoders": [
+        "prott5"
+      ],
+      "scalers": {
+        "prott5": "models/scalers/classic_prott5.joblib"
+      },
+      "artifact": "models/classifiers/prott5_svm.joblib",
+      "threshold": -0.0396427163811835,
+      "training_seed": null
+    },
+    "prott5_rf": {
+      "description": "prott5 + RF",
+      "family": "traditional_classifier",
+      "method": "RF",
+      "encoders": [
+        "prott5"
+      ],
+      "scalers": {},
+      "artifact": "models/classifiers/prott5_rf.joblib",
+      "threshold": 0.4666666666666667,
+      "training_seed": 43
+    },
+    "prott5_xgboost": {
+      "description": "prott5 + XGBoost",
+      "family": "traditional_classifier",
+      "method": "XGBoost",
+      "encoders": [
+        "prott5"
+      ],
+      "scalers": {},
+      "artifact": "models/classifiers/prott5_xgboost.joblib",
+      "threshold": -0.6141472458839417,
+      "training_seed": 43
+    },
+    "protbert_lr": {
+      "description": "protbert + LR",
+      "family": "traditional_classifier",
+      "method": "LR",
+      "encoders": [
+        "protbert"
+      ],
+      "scalers": {
+        "protbert": "models/scalers/classic_protbert.joblib"
+      },
+      "artifact": "models/classifiers/protbert_lr.joblib",
+      "threshold": -2.274494007641279,
+      "training_seed": null
+    },
+    "protbert_svm": {
+      "description": "protbert + RBF-SVM",
+      "family": "traditional_classifier",
+      "method": "RBF-SVM",
+      "encoders": [
+        "protbert"
+      ],
+      "scalers": {
+        "protbert": "models/scalers/classic_protbert.joblib"
+      },
+      "artifact": "models/classifiers/protbert_svm.joblib",
+      "threshold": 0.2201019231516158,
+      "training_seed": null
+    },
+    "protbert_rf": {
+      "description": "protbert + RF",
+      "family": "traditional_classifier",
+      "method": "RF",
+      "encoders": [
+        "protbert"
+      ],
+      "scalers": {},
+      "artifact": "models/classifiers/protbert_rf.joblib",
+      "threshold": 0.45,
+      "training_seed": 43
+    },
+    "protbert_xgboost": {
+      "description": "protbert + XGBoost",
+      "family": "traditional_classifier",
+      "method": "XGBoost",
+      "encoders": [
+        "protbert"
+      ],
+      "scalers": {},
+      "artifact": "models/classifiers/protbert_xgboost.joblib",
+      "threshold": 0.4794554412364959,
+      "training_seed": 43
+    },
+    "esm2_lr": {
+      "description": "esm2 + LR",
+      "family": "traditional_classifier",
+      "method": "LR",
+      "encoders": [
+        "esm2"
+      ],
+      "scalers": {
+        "esm2": "models/scalers/classic_esm2.joblib"
+      },
+      "artifact": "models/classifiers/esm2_lr.joblib",
+      "threshold": -4.144881006475965,
+      "training_seed": null
+    },
+    "esm2_svm": {
+      "description": "esm2 + RBF-SVM",
+      "family": "traditional_classifier",
+      "method": "RBF-SVM",
+      "encoders": [
+        "esm2"
+      ],
+      "scalers": {
+        "esm2": "models/scalers/classic_esm2.joblib"
+      },
+      "artifact": "models/classifiers/esm2_svm.joblib",
+      "threshold": -0.1045992620042598,
+      "training_seed": null
+    },
+    "esm2_rf": {
+      "description": "esm2 + RF",
+      "family": "traditional_classifier",
+      "method": "RF",
+      "encoders": [
+        "esm2"
+      ],
+      "scalers": {},
+      "artifact": "models/classifiers/esm2_rf.joblib",
+      "threshold": 0.5033333333333333,
+      "training_seed": 43
+    },
+    "esm2_xgboost": {
+      "description": "esm2 + XGBoost",
+      "family": "traditional_classifier",
+      "method": "XGBoost",
+      "encoders": [
+        "esm2"
+      ],
+      "scalers": {},
+      "artifact": "models/classifiers/esm2_xgboost.joblib",
+      "threshold": -0.0875081866979599,
+      "training_seed": 43
+    },
+    "prott5_mlp": {
+      "description": "prott5 + nonlinear projection MLP",
+      "family": "neural",
+      "mode": "M1",
+      "encoders": [
+        "prott5"
+      ],
+      "scalers": {
+        "prott5": "models/scalers/neural_prott5.joblib"
+      },
+      "artifact": "models/classifiers/prott5_mlp.pt",
+      "threshold": -0.0285080820322036,
+      "training_seed": 43
+    },
+    "protbert_mlp": {
+      "description": "protbert + nonlinear projection MLP",
+      "family": "neural",
+      "mode": "M2",
+      "encoders": [
+        "protbert"
+      ],
+      "scalers": {
+        "protbert": "models/scalers/neural_protbert.joblib"
+      },
+      "artifact": "models/classifiers/protbert_mlp.pt",
+      "threshold": -1.9332129955291748,
+      "training_seed": 43
+    },
+    "esm2_mlp": {
+      "description": "esm2 + nonlinear projection MLP",
+      "family": "neural",
+      "mode": "M3",
+      "encoders": [
+        "esm2"
+      ],
+      "scalers": {
+        "esm2": "models/scalers/neural_esm2.joblib"
+      },
+      "artifact": "models/classifiers/esm2_mlp.pt",
+      "threshold": -0.553622305393219,
+      "training_seed": 43
+    },
+    "equal_fusion": {
+      "description": "Equal-weight fusion",
+      "family": "neural",
+      "mode": "M4",
+      "encoders": [
+        "prott5",
+        "protbert",
+        "esm2"
+      ],
+      "scalers": {
+        "prott5": "models/scalers/neural_prott5.joblib",
+        "protbert": "models/scalers/neural_protbert.joblib",
+        "esm2": "models/scalers/neural_esm2.joblib"
+      },
+      "artifact": "models/classifiers/equal_fusion.pt",
+      "threshold": -0.3648246526718139,
+      "training_seed": 43
+    },
+    "adaptive_fusion": {
+      "description": "Adaptive fusion",
+      "family": "neural",
+      "mode": "M5",
+      "encoders": [
+        "prott5",
+        "protbert",
+        "esm2"
+      ],
+      "scalers": {
+        "prott5": "models/scalers/neural_prott5.joblib",
+        "protbert": "models/scalers/neural_protbert.joblib",
+        "esm2": "models/scalers/neural_esm2.joblib"
+      },
+      "artifact": "models/classifiers/adaptive_fusion.pt",
+      "threshold": 0.1655782610177993,
+      "training_seed": 43
+    }
+  }
+}

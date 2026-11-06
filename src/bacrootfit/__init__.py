@@ -1,2 +1,2 @@
-"""BacRootFit public interfaces. Experimental labels and predictions remain separate."""
-__version__ = "1.0.0"
+"""BacRootFit: frozen encoders and sequence-level classifiers."""
+__version__ = '1.0.0'
