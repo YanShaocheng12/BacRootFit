@@ -1,0 +1,2 @@
+protein_id	sequence_sha256	model	decision_score	predicted_label
+synthetic_example	5fe7639a23d5f84dd551a38f3ec927a680b5c191c00f039e21eba7498147f8be	prott5_svm	-0.5338372834070712	0

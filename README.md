@@ -6,7 +6,7 @@ BacRootFit provides a curated resource for bacterial root-association evidence a
 
 ## Installation
 
-Use Python 3.10 in an environment with an NVIDIA GPU and a CUDA-enabled PyTorch installation for encoding protein sequences. Install the PyTorch build appropriate for your GPU first, then:
+Use Python 3.10. To predict new FASTA sequences, use an NVIDIA GPU and install a CUDA-enabled PyTorch build appropriate for your GPU first. The verification example below also works with CPU-only PyTorch.
 
 ```bash
 git clone https://github.com/YanShaocheng12/BacRootFit.git
@@ -15,7 +15,18 @@ python -m pip install -e .
 bacrootfit list-models
 ```
 
-The first prediction downloads the required frozen protein language model weights from Hugging Face. Adaptive and equal-weight fusion need ProtT5, ProtBert and ESM-2; single-encoder classifiers need only their respective encoder. The three encoders are loaded one at a time. First use requires internet access and substantial disk space for the pretrained checkpoints.
+### Verify installation on CPU
+
+Run a small example without downloading any protein language model weights:
+
+```bash
+bacrootfit predict --input examples/synthetic.faa --features examples/synthetic_features.npz --model prott5_svm --output example_output.tsv
+python scripts/check_cpu_example.py example_output.tsv
+```
+
+The artificial zero-valued features are a software test fixture, **not** ProtT5 embeddings of the synthetic sequence; their scores have no biological meaning. The checked-in `examples/synthetic_expected.tsv` shows the expected output. The comparison allows small floating-point differences. Do not use this feature file to predict other sequences.
+
+The first real FASTA prediction downloads the required frozen protein language model weights from Hugging Face. Adaptive and equal-weight fusion need ProtT5, ProtBert and ESM-2; single-encoder classifiers need only their respective encoder. The three encoders are loaded one at a time. First use requires internet access and substantial disk space for the pretrained checkpoints.
 
 ## Predict your own protein FASTA
 
