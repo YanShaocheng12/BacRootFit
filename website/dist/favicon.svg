@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>BacRootFit</title>
+  <g transform="translate(4 1)">
+    <path d="M17 27 L7 23 M17 37 L6 41 M22 49 L15 55" fill="none" stroke="#9B795C" stroke-width="3" stroke-linecap="round"/>
+    <path d="M13 7 C18 17 19 25 17 33 C15 44 22 53 29 57 C32 59 35 57 33 52
+             C29 42 28 35 29 28 C30 20 34 13 33 7 Z" fill="#EADCC4" stroke="#8B684D" stroke-width="3" stroke-linejoin="round"/>
+    <rect x="32" y="10" width="10" height="19" rx="5" transform="rotate(24 37 19.5)" fill="#548F80" stroke="#254A48" stroke-width="2.4"/>
+    <rect x="30" y="32" width="9" height="17" rx="4.5" transform="rotate(-14 34.5 40.5)" fill="#78A998" stroke="#254A48" stroke-width="2.4"/>
+  </g>
+</svg>

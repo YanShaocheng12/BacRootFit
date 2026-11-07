@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>BacRootFit</title>
+  <desc>Rod-shaped bacteria attached to the surface of a root segment.</desc>
+  <g transform="translate(6 0)">
+    <path d="M19 25 C13 25 10 21 5 22 M18 32 C12 33 9 36 6 39
+             M20 42 C14 43 12 47 9 48 M25 51 C21 53 19 55 18 58
+             M33 48 C38 51 41 49 46 52"
+          fill="none" stroke="#9B795C" stroke-width="1.8" stroke-linecap="round"/>
+    <path d="M14 7 C18 16 20 23 18 31 C16 42 20 52 28 58
+             C32 61 36 59 34 54 C31 47 29 38 30 30 C31 22 35 14 34 7 Z"
+          fill="#EADCC4" stroke="#8B684D" stroke-width="2.25" stroke-linejoin="round"/>
+    <path d="M23 11 C26 20 24 26 23 34 C22 43 25 50 30 55"
+          fill="none" stroke="#C09F78" stroke-width="1.55" stroke-linecap="round"/>
+    <path d="M18 13 C21 14 29 14 33 12" fill="none" stroke="#C09F78" stroke-width="1.2" stroke-linecap="round"/>
+    <g transform="translate(37.8 16.6) rotate(-65)">
+      <rect x="-7.5" y="-3.7" width="15" height="7.4" rx="3.7" fill="#78A998" stroke="#254A48" stroke-width="1.8"/>
+      <path d="M-3.5 .4 C-2 -1.5 .1 1.6 2.8 -.4" fill="none" stroke="#254A48" stroke-width="1" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(34.2 32.1) rotate(-83)">
+      <rect x="-6.3" y="-3.5" width="12.6" height="7" rx="3.5" fill="#4D897B" stroke="#254A48" stroke-width="1.8"/>
+      <path d="M-2.5 0 H2.5" stroke="#DDEEE3" stroke-width="1.1" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(36.3 44.5) rotate(66)">
+      <rect x="-5.5" y="-3.2" width="11" height="6.4" rx="3.2" fill="#A4C4AE" stroke="#254A48" stroke-width="1.65"/>
+      <circle cx=".7" cy="-.35" r=".85" fill="#254A48"/>
+    </g>
+  </g>
+</svg>
