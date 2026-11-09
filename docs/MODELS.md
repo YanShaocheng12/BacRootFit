@@ -18,6 +18,6 @@ LR and SVM use their own training-fitted `StandardScaler`; RF and XGBoost use ra
 
 ## Limitations
 
-The evaluated background set is annotation-screened, not individually established as negative by root-colonization experiments. Internal test results were observed during model development and are retrospective. Experimental evidence can vary with strain, host and conditions. Classifier predictions do not prove a colonization phenotype; decision scores and RF vote fractions are not calibrated probabilities.
+The evaluated background set is annotation-screened, not individually established as negative by root-colonization experiments. The internal test set was held out from model training. We reviewed its results during model development. Experimental evidence can vary with strain, host and conditions. Classifier predictions do not prove a colonization phenotype; decision scores and RF vote fractions are not calibrated probabilities.
 
 For cached raw embeddings, supply an NPZ containing `ids` and `sha256` Unicode arrays plus the required encoder arrays. The command checks exact ID and hash order before classification; the caller remains responsible for ensuring the features were extracted using the above pinned checkpoints and rules.
